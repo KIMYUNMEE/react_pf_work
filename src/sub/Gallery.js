@@ -10,18 +10,14 @@ const masonryOptions = {
   itemSelector: ".item" //각 패널의 클래스명
 }
 
-function Gallery(){
-  const baseURL = "https://www.flickr.com/services/rest/?";
-  const method1 = "flickr.interestingness.getList";
-  const method2 = "flickr.photos.search";
-  const key= "e7ed3b39fe112d7e93d03c19325305e0";
-  const count = 500;
-  const url = `${baseURL}method=${method1}&api_key=${key}&per_page=${count}&format=json&nojsoncallback=1`;  
-  const url2 = `${baseURL}method=${method2}&api_key=${key}&per_page=${count}&format=json&nojsoncallback=1&tags=ocean`;
-  
+function Gallery(){ 
   let [items, setItems] = useState([]); 
-  let list = useRef(null);
-  console.log(list);
+  let list = useRef(null);  
+  let [url, url2] = getURL();
+  /*
+  let url = getURL()[0];
+  let url2 = getURL()[1];
+  */
   
   useEffect(()=>{    
     getFlickr(url);
@@ -30,7 +26,10 @@ function Gallery(){
   return (
     <section className="content gallery">
       <div className="inner">
-        <h1>Gallery</h1>
+        <h1 onClick={()=>{
+          list.current.classList.remove("on");
+          getFlickr(url);
+        }}>Gallery</h1>
        
         <button onClick={()=>{          
           list.current.classList.remove("on");          
@@ -65,6 +64,17 @@ function Gallery(){
       </div>
     </section>
   )  
+
+  function getURL(){
+    const baseURL = "https://www.flickr.com/services/rest/?";
+    const method1 = "flickr.interestingness.getList";
+    const method2 = "flickr.photos.search";
+    const key= "e7ed3b39fe112d7e93d03c19325305e0";
+    const count = 500;
+    const url = `${baseURL}method=${method1}&api_key=${key}&per_page=${count}&format=json&nojsoncallback=1`;  
+    const url2 = `${baseURL}method=${method2}&api_key=${key}&per_page=${count}&format=json&nojsoncallback=1&tags=ocean`;
+    return [url, url2];
+  }
   
   async function getFlickr(url){    
     await axios
