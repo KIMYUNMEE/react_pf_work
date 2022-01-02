@@ -1,12 +1,109 @@
-footer {
-  width: 100%; border-top: 1px solid #ddd;
-  padding: 50px 0px;
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap");
+body {
+  font-family: "Manrope", sans-serif;
+}
 
-  .inner {
-    width: 1180px; margin: 0px auto; text-align: center;
+#footer {
+  width: 100%;
+  padding: 100px 0;
+  border-top: 1px solid #000;
+}
+#footer .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+#footer .inner::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#footer .inner h1 {
+  margin-bottom: 42px;
+  font-size: 23px;
+  float: left;
+  color: #121212;
+}
+#footer .inner .wrap01 {
+  float: left;
+  margin-left: 150px;
+}
+#footer .inner .wrap01::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#footer .inner .wrap01 ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#footer .inner .wrap01 ul li {
+  float: left;
+  width: 33.3%;
+}
+#footer .inner .wrap01 li a {
+  display: block;
+  font-size: 11px;
+  line-height: 30px;
+  color: #515151;
+  font-weight: bold;
+}
 
-    p {
-      font: 12px/1 "arial"; color: #888; text-align: center;
+#footer .inner .wrap03 {
+  text-align: center;
+}
+#footer .inner p {
+  font-size: 11px;
+  color: #515151;
+  font-weight: bold;
+  text-align: right;
+  padding-top: 30px;
+}
+.hide {
+  display: none;
+}
+#footer .inner .wrap03 .snsIcon::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+#footer .inner .wrap03 .snsIcon ul::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+#footer .inner .wrap03 .snsIcon ul {
+  float: right;
+}
+#footer .inner .wrap03 .snsIcon ul li {
+  float: left;
+  margin-right: 10px;
+}
+#footer .inner .wrap03 .snsIcon ul li a {
+  color: #292929;
+}
+#footer .inner .wrap03 .snsIcon ul li:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 1179px) {
+  #footer {
+    .inner {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 739px) {
+  #footer {
+    .inner {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 479px) {
+  #footer {
+    .inner {
+      width: 100%;
     }
   }
 }

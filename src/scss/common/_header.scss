@@ -1,29 +1,60 @@
 header {
-  width: 100%; background: #333;
+  width: 100%;
 
   .inner {
-    width: 1180px; height: 100px;  margin: 0px auto; position: relative;
+    width: 1180px;
+    height: 80px;
+    margin: 0px auto;
 
     h1 {
-      position: absolute; left: 0px; bottom: 20px;
+      float: left;
 
       a {
-        font: bold 24px/1 "arial"; color: #fff;
+        font-size: 24px;
+        color: #000;
       }
     }
 
     #gnb {
-      position: absolute; bottom: 0px; right: 0px;
+      float: right;
 
       li {
         float: left;
 
         a {
-          display: inline-block; padding: 22px 30px; 
-          font: 14px/1 "arial"; color: #fff;
+          display: inline-block;
+          padding: 0px 15px;
+          line-height: 80px;
+          height: 80px;
+          font-size: 12px;
+          color: #666;
         }
       }
     }
+  }
+}
+@media screen and (max-width: 1179px) {
+  header {
+    padding: 0 30px;
+    .inner {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 739px) {
+  header {
+    padding: 0 20px;
+    .inner {
+      width: 100%;
+    }
+  }
+}
 
+@media screen and (max-width: 479px) {
+  header {
+    padding: 0 15px;
+    .inner {
+      width: 100%;
+    }
   }
 }

@@ -14,8 +14,6 @@ function App() {
   return (
     <div className="App"> 
       <Header />
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
-
       <Route exact path="/" component={Main}></Route> 
       <Route exact path="/department" component={Department}></Route>
       <Route exact path="/board" component={Board}></Route>

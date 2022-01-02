@@ -6,9 +6,8 @@ const path=process.env.PUBLIC_URL;
 
 const masonryOptions = {
   fitWidth: false, 
-  //columnWidth: 200,
-  gutter: 0, //간격 (반응형을 위해서 보통 0처리하고 scss에서 padding으로 구현)
-  itemSelector: ".item" //각 패널의 클래스명
+  gutter: 0, 
+  itemSelector: ".item" 
 }
 
 function Gallery(){ 
@@ -22,15 +21,15 @@ function Gallery(){
   useEffect(()=>{ 
     getFlickr({
       type: "interest",
-      count: 500
+      count: 10
     });
   },[]);  
 
   return (
     <section className="content gallery">
       <div className="inner">
-        <h1 onClick={()=>{          
-          if(enableClick && !interest){ //모션이 끝났고 현재 interest값이 true가 아닐때 interst호출 기능 실행
+        <h2 onClick={()=>{          
+          if(enableClick && !interest){ 
             setEnableClick(false);           
             list.current.classList.remove("on");         
             setLoading(true);
@@ -40,20 +39,21 @@ function Gallery(){
               count: 500
             });
           }          
-        }}>Gallery</h1>
+        }}>Gallery</h2>
+        <p>Our projects are axamples of attitudes rather than designs.</p>
+        <span>They are samples in a series of contextual examinations rather than isolated masterpieces. They are associative rather than symbolic. They are comments rather than statements. Every story told is a shared experience of contemporary conditions set within a given frame.</span>
 
-        <div className="searchBox">  
+        <div className="searchBox">
           <input type="text" ref={input} onKeyPress={e=>{
             const tags = input.current.value; 
              
             if(e.key !== "Enter" || tags==="") return;
             if(enableClick){
               setEnableClick(false);  
-              //검색어 입력하고 엔터키 눌렀을떄 interest값을 false로 변경해 제목클릭가능하게 설정
               setInterest(false);          
               list.current.classList.remove("on");         
               setLoading(true);
-             
+      
               const tags = input.current.value;              
               input.current.value = "";
 
@@ -63,14 +63,13 @@ function Gallery(){
                 tags: tags 
               });
             }            
-          }} />
+          }}  placeholder="Your search"/>
           <button onClick={()=>{
             if(enableClick){
               const tags = input.current.value; 
               if(tags==="") return;  
 
               setEnableClick(false);  
-              //검색어 버튼 클릭시 interest값을 false로 변경해 제목클릭가능하게 설정
               setInterest(false);             
               list.current.classList.remove("on");         
               setLoading(true);
@@ -84,14 +83,23 @@ function Gallery(){
                 tags: tags 
               });
             }
-          }}>검색</button>
+          }}>Search</button>
         </div>      
 
+       
+        {(loading) ? <img className="loading" src={path + "/img/loading2.gif"} /> : ""}
         
-
-       
-        {(loading) ? <img className="loading" src={path+"/img/loading.gif"}/> : ""}
-       
+        <nav>
+          <ul>
+            <li><a href="">ALL GALLERY</a></li>
+            <li><a href="">ARCHITECTURE</a></li>
+            <li><a href="">LANDSCAPE</a></li>
+            <li><a href="">INTERIOR</a></li>
+            <li><a href="">GRAPHIC DESIGN</a></li>
+            <li><a href="">PRODUCT DESIGN</a></li>
+        </ul>
+        </nav>
+      
         <div className="list" ref={list}>         
           <Masonry
             className={"frame"} 
@@ -102,13 +110,15 @@ function Gallery(){
           > 
             {
               items.map((item, index)=>{
+                
                 const imgSrc = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`;
                 return (
                   <li key={index} className="item">                  
                     <div className="inner">
-                      <img src={imgSrc} />
-                      
                       <h2>{item.title}</h2>
+                      <img src={imgSrc} />
+                      <p>{item.owner}</p>
+
                     </div>
                   </li>
                 )
@@ -119,17 +129,15 @@ function Gallery(){
       </div>
     </section>
   )  
-
- 
-  
   async function getFlickr(opt){ 
     let url = "";
     
     const baseURL = "https://www.flickr.com/services/rest/?";
     const method1 = "flickr.interestingness.getList";
     const method2 = "flickr.photos.search";
-    const key= "e7ed3b39fe112d7e93d03c19325305e0";
+    const key= "b7af47ce68181695942511b2b8cb5b97";
     const count = opt.count;
+ 
     
     if(opt.type === "interest"){
       url = `${baseURL}method=${method1}&api_key=${key}&per_page=${count}&format=json&nojsoncallback=1`;  
@@ -146,6 +154,7 @@ function Gallery(){
     .get(url)
     .then(json=>{      
       setItems(json.data.photos.photo);
+      console.log(json);
     })    
     
    
