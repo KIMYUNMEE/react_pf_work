@@ -7,7 +7,7 @@ function Main() {
     <figure className="visual">
         <div className="inner">
         <p>We are Snohetta. We create<br/><a href="">architecture,</a><a href="">landscapes,</a><br/><a href="">interiors,</a><a href="">product design</a><br/>and <a href="">graphic design.</a></p>
-            <div className="visual_img"><img src="img/f470e4cc3df2e718b224293c71383079_1024w.jpeg" alt="호텔 이미지"></img>
+            <div className="visual_img"><img src="img/f470e4cc3df2e718b224293c71383079_1024w.jpeg" alt="건축 이미지"></img>
             <div className="img_info"> <em> Snohetta is bulit by more than 240 people from 30 different nations.</em>
                 <a href="">Read more about us</a>
             </div></div>
@@ -22,28 +22,28 @@ function Main() {
             <div className="wrap02">
             <article>
                 <div className="pic">
-                    <img src="img/8e0ea114c467c7bccc4af47e13ea6ebf_500w.jpg" alt="호텔 이미지"></img>
+                    <img src="img/8e0ea114c467c7bccc4af47e13ea6ebf_500w.jpg" alt="건축 이미지"></img>
                     <p>2000-2008</p>
                     <span>Norwegian National Opera and Ballet</span>
                 </div>
             </article>
             <article>
                 <div className="pic">
-                    <img src="img/f5941d7b5f21c4ce86b97178c325b18f_500w.jpg" alt="호텔 이미지"></img>
+                    <img src="img/f5941d7b5f21c4ce86b97178c325b18f_500w.jpg" alt="건축  이미지"></img>
                     <p>2017-2022</p>
                     <span>Airside Hong Kong</span>
                 </div>
             </article>
             <article>
                 <div className="pic">
-                    <img src="img/cb7ecdbe7742076504c3b05024d19d91_500w.jpg" alt="호텔 이미지"></img>
+                    <img src="img/cb7ecdbe7742076504c3b05024d19d91_500w.jpg" alt="건축  이미지"></img>
                     <p>2017-2024</p>
                     <span>Shanghai Grand Opera House</span>
                 </div>
             </article>
             <article>
                 <div className="pic">
-                    <img src="img/76246a2559c136b35d977e57eae04a35_500w.jpg" alt="호텔 이미지"></img>
+                    <img src="img/76246a2559c136b35d977e57eae04a35_500w.jpg" alt="건축  이미지"></img>
                     <p>in process</p>
                     <span>Pirelli 35 Refurbishment</span>
                 </div>

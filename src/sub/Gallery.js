@@ -118,6 +118,7 @@ function Gallery(){
                       <h2>{item.title}</h2>
                       <img src={imgSrc} />
                       <p>{item.owner}</p>
+                      <a href="">View more</a>
 
                     </div>
                   </li>

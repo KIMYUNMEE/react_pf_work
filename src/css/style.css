@@ -568,7 +568,9 @@ body {
           .gallery .inner .list ul .item .inner img {
             width: 100%;
             margin-bottom: 10px;
-            object-fit: cover; }
+            object-fit: cover;
+            opacity: 0.5;
+            transition: 0.5s; }
           .gallery .inner .list ul .item .inner h2 {
             font-size: 15px;
             padding-left: 12px;
@@ -582,6 +584,17 @@ body {
             font-size: 13px;
             text-align: right;
             color: #555; }
+          .gallery .inner .list ul .item .inner a {
+            position: absolute;
+            top: 50%;
+            display: none;
+            color: #fff;
+            left: 50%;
+            transform: translate(-50%, -50%); }
+          .gallery .inner .list ul .item .inner:hover img {
+            opacity: 1; }
+          .gallery .inner .list ul .item .inner:hover a {
+            display: block; }
 
 @media screen and (max-width: 1179px) {
   .content {
