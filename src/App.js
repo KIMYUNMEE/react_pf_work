@@ -14,12 +14,12 @@ function App() {
   return (
     <div className="App"> 
       <Header />
-      <Route  path="/" component={Main}></Route> 
+      <Route exact path="/" component={Main}></Route> 
       <Route  path="/department" component={Department}></Route>
       <Route  path="/board" component={Board}></Route>
       <Route  path="/gallery" component={Gallery}></Route>
       <Route  path="/youtube" component={Youtube}></Route>
-      <Route  path="/location" component={Location}></Route>
+      <Route path="/location" component={Location}></Route>
       <Route  path="/membership" component={Membership}></Route>  
           
       <Footer />      
