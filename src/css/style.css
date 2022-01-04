@@ -375,7 +375,8 @@ body {
       font-weight: normal;
       border-bottom: 1px solid #000; }
     .contents_about04 .inner .wrap01 {
-      margin-left: 220px; }
+      margin-left: 220px;
+      border-bottom: 1px solid #000; }
       .contents_about04 .inner .wrap01 ul li {
         float: left;
         width: 33.3%;
