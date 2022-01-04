@@ -14,13 +14,13 @@ function App() {
   return (
     <div className="App"> 
       <Header />
-      <Route exact path="/" component={Main}></Route> 
-      <Route exact path="/department" component={Department}></Route>
-      <Route exact path="/board" component={Board}></Route>
-      <Route exact path="/gallery" component={Gallery}></Route>
-      <Route exact path="/youtube" component={Youtube}></Route>
-      <Route exact path="/location" component={Location}></Route>
-      <Route exact path="/membership" component={Membership}></Route>  
+      <Route  path="/" component={Main}></Route> 
+      <Route  path="/department" component={Department}></Route>
+      <Route  path="/board" component={Board}></Route>
+      <Route  path="/gallery" component={Gallery}></Route>
+      <Route  path="/youtube" component={Youtube}></Route>
+      <Route  path="/location" component={Location}></Route>
+      <Route  path="/membership" component={Membership}></Route>  
           
       <Footer />      
     </div>
