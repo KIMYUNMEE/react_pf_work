@@ -1,7 +1,8 @@
-const path=process.env.PUBLIC_URL;
+
 function Main() {
     
     return (
+        
     <div>
     <div>
     <figure className="visual">

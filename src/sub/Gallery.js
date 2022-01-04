@@ -26,6 +26,7 @@ function Gallery(){
   },[]);  
 
   return (
+    
     <section className="content gallery">
       <div className="inner">
         <h2 onClick={()=>{          
@@ -114,7 +115,7 @@ function Gallery(){
                 const imgSrc = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`;
                 return (
                   <li key={index} className="item">                  
-                    <div className="inner">
+                    <div className="inner" >
                       <h2>{item.title}</h2>
                       <img src={imgSrc} />
                       <p>{item.owner}</p>
@@ -124,10 +125,13 @@ function Gallery(){
                   </li>
                 )
               })
+              
             }
           </Masonry>  
         </div>
+        
       </div>
+      
     </section>
   )  
   async function getFlickr(opt){ 
@@ -167,6 +171,7 @@ function Gallery(){
     },1000); 
      
   }
+
 }
 
 export default Gallery;

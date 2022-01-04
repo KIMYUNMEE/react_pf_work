@@ -38,91 +38,70 @@
           font-size: 15px;
           color: #898989;
         }
+        .btn_load {
+          font-size: 11px;
+          font-weight: 700;
+          text-align: right;
+          color: #666;
+          display: block;
+          text-decoration-line: underline;
+          margin-top: 45px;
+        }
       }
       &::after {
         content: "";
         clear: both;
         display: block;
       }
+      padding-bottom: 130px;
     }
-    .qna {
-      float: left;
-    }
-  }
-}
-
-@media screen and (max-width: 1179px) {
-  .content {
-    padding: 150px 30px;
-    > .inner {
-      width: 100%;
-    }
-    > .inner nav {
-      float: none;
-      ul {
-        li {
-          float: left;
-          width: 33.3%;
-        }
-        &::after {
-          content: "";
-          display: block;
-          clear: both;
-        }
-      }
-    }
-  }
-
-  .community {
-    .inner {
-      .list {
-        margin-left: 0;
-        .item {
-          width: 33.333% !important;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 739px) {
-  .board {
-    .inner {
-      .list {
-        margin-left: 0;
-        .item {
-          width: 100% !important;
-        }
-      }
-    }
-  }
-  .content {
-    > .inner {
-      > h2 {
-        margin-left: 0;
-        width: 100%;
-      }
-      p {
-        margin-left: 0;
-        width: 100%;
-      }
+    .faq {
       span {
-        margin-left: 0;
-        width: 100%;
+        font-size: 45px;
       }
-      nav {
-        ul {
-          li {
-            float: left;
-            width: 25%;
-            padding-bottom: 15px;
+      .title {
+        float: left;
+        width: 30%;
+      }
+      .answer {
+        width: 70%;
+        float: left;
+
+        p {
+          height: 40px;
+          line-height: 40px;
+          font-size: 20px;
+          &::before {
+            content: "";
+            display: inline-block;
+            clear: both;
+            margin-right: 10px;
+            width: 20px;
+            height: 3px;
+            background: #a2a2a2;
+            vertical-align: middle;
           }
           &::after {
             content: "";
-            display: block;
+            display: inline-block;
             clear: both;
+            width: 20px;
+            height: 3px;
+            background: #a2a2a2;
+            transform: rotate(-90deg);
+            margin-left: -206px;
+            vertical-align: middle;
           }
         }
+        article {
+          border-top: 1px solid #bebebe;
+          border-bottom: 1px solid #bebebe;
+        }
+      }
+      &::after {
+        content: "";
+        clear: both;
+        display: block;
       }
     }
   }
