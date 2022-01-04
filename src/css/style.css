@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap");
 * {
   margin: 0px;
@@ -512,6 +513,13 @@ body {
       line-height: 25px;
       padding-bottom: 16px;
       margin-left: 220px; }
+    .content > .inner .youtube_txt {
+      font-size: 20px;
+      color: #494949;
+      width: 46%;
+      line-height: 25px;
+      padding-bottom: 16px;
+      margin-left: 220px; }
     .content > .inner > span {
       display: inline-block;
       width: 35%;
@@ -649,5 +657,213 @@ body {
     content: "";
     display: block;
     clear: both; } }
+.board .inner {
+  position: relative; }
+  .board .inner .loading {
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    width: 50%;
+    width: 200px;
+    height: 200px; }
+  .board .inner .list {
+    opacity: 0;
+    transform: translateY(200px);
+    transition: 1s;
+    position: relative;
+    margin-left: 220px;
+    border-top: 1px solid #555; }
+    .board .inner .list.on {
+      opacity: 1;
+      transform: translateY(0px); }
+    .board .inner .list ul {
+      width: 100%; }
+      .board .inner .list ul .item {
+        width: 50%;
+        padding: 20px;
+        float: left; }
+        .board .inner .list ul .item .inner {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #555; }
+          .board .inner .list ul .item .inner img {
+            width: 100%;
+            margin-bottom: 10px;
+            object-fit: cover;
+            opacity: 0.5;
+            transition: 0.5s; }
+          .board .inner .list ul .item .inner h2 {
+            font-size: 15px;
+            padding-left: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #555;
+            font-weight: normal;
+            color: #000;
+            height: 30px;
+            margin-bottom: 20px; }
+          .board .inner .list ul .item .inner p {
+            font-size: 13px;
+            text-align: right;
+            color: #555; }
+          .board .inner .list ul .item .inner a {
+            position: absolute;
+            top: 50%;
+            display: none;
+            color: #fff;
+            left: 50%;
+            transform: translate(-50%, -50%); }
+          .board .inner .list ul .item .inner:hover img {
+            opacity: 1; }
+          .board .inner .list ul .item .inner:hover a {
+            display: block; }
+
+@media screen and (max-width: 1179px) {
+  .content {
+    padding: 150px 30px; }
+    .content > .inner {
+      width: 100%; }
+    .content > .inner nav {
+      float: none; }
+      .content > .inner nav ul li {
+        float: left;
+        width: 33.3%; }
+      .content > .inner nav ul::after {
+        content: "";
+        display: block;
+        clear: both; }
+
+  .board .inner .list {
+    margin-left: 0; }
+    .board .inner .list .item {
+      width: 33.333% !important; } }
+@media screen and (max-width: 739px) {
+  .board .inner .list {
+    margin-left: 0; }
+    .board .inner .list .item {
+      width: 100% !important; }
+
+  .content > .inner > h2 {
+    margin-left: 0;
+    width: 100%; }
+  .content > .inner p {
+    margin-left: 0;
+    width: 100%; }
+  .content > .inner span {
+    margin-left: 0;
+    width: 100%; }
+  .content > .inner nav ul li {
+    float: left;
+    width: 25%;
+    padding-bottom: 15px; }
+  .content > .inner nav ul::after {
+    content: "";
+    display: block;
+    clear: both; } }
+.youtube .inner .frame::after {
+  content: "";
+  display: block;
+  clear: both; }
+.youtube .inner .frame article {
+  width: 100%;
+  float: left;
+  padding: 15px;
+  overflow: hidden; }
+  .youtube .inner .frame article .inner {
+    width: 100%;
+    height: 100%;
+    padding: 25px 0px;
+    border-top: 2px solid #bebebe;
+    /*
+      word-break: 텍스트의 줄바꿈 속성을 지정
+      - normal (한글은 한글자 기준, 영어는 단어기준으로 줄바꿈됨) default
+      - break-all (한글과 영문 모두 글자기준으로 줄바꿈)
+      - keep-all (한글 영어 모두 단어기준으로 줄바꿈)
+    */ }
+    .youtube .inner .frame article .inner .txt {
+      float: left;
+      width: 60%; }
+      .youtube .inner .frame article .inner .txt h2 {
+        font-size: 12px;
+        color: #adadad;
+        word-break: break-all;
+        float: left;
+        width: 50%; }
+      .youtube .inner .frame article .inner .txt p {
+        width: 50%;
+        font-size: 13px;
+        float: left;
+        color: #5e5e5e;
+        word-break: keep-all; }
+    .youtube .inner .frame article .inner .pic {
+      position: relative;
+      float: left;
+      width: 40%;
+      overflow: hidden;
+      cursor: pointer; }
+      .youtube .inner .frame article .inner .pic img {
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        object-fit: cover;
+        transition: 1s; }
+      .youtube .inner .frame article .inner .pic .btn_click {
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 13px;
+        font-weight: bold;
+        color: #fff;
+        text-decoration-line: underline; }
+      .youtube .inner .frame article .inner .pic:hover .btn_click {
+        display: block; }
+      .youtube .inner .frame article .inner .pic:hover img {
+        opacity: 1; }
+    .youtube .inner .frame article .inner::after {
+      content: "";
+      clear: both;
+      display: block; }
+  .youtube .inner .frame article .btn_show {
+    font-size: 11px;
+    font-weight: bold;
+    margin-left: 30%;
+    color: #666;
+    display: block;
+    text-decoration-line: underline;
+    margin-top: 20px; }
+  .youtube .inner .frame article:last-child {
+    border-bottom: 2px solid #bebebe; }
+.youtube .inner .pop {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 5vw; }
+  .youtube .inner .pop iframe {
+    border: none;
+    width: 100%;
+    height: 100%; }
+  .youtube .inner .pop span {
+    position: absolute;
+    top: 3vw;
+    right: 5vw;
+    font: bold 14px/1 "arial";
+    color: #fff;
+    cursor: pointer; }
+.youtube .btn_wrap {
+  width: 1180px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 45px; }
+  .youtube .btn_wrap .btn_more {
+    font-size: 11px;
+    color: #555;
+    background: none;
+    border: 1px solid #bebebe;
+    height: 40px;
+    width: 90px; }
 
 /*# sourceMappingURL=style.css.map */

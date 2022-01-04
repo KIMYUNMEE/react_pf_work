@@ -1,0 +1,163 @@
+.board {
+  .inner {
+    position: relative;
+
+    .loading {
+      position: absolute;
+      top: 60%;
+      left: 45%;
+      width: 50%;
+      // transform: translateX(-50%);
+      width: 200px;
+      height: 200px;
+    }
+
+    .list {
+      opacity: 0;
+      transform: translateY(200px);
+      transition: 1s;
+      position: relative;
+      margin-left: 220px;
+      border-top: 1px solid #555;
+
+      &.on {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+
+      ul {
+        width: 100%;
+
+        .item {
+          width: 50%;
+          padding: 20px;
+          float: left;
+
+          .inner {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #555;
+            // box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+
+            img {
+              width: 100%;
+              margin-bottom: 10px;
+              object-fit: cover;
+              opacity: 0.5;
+              transition: 0.5s;
+            }
+
+            h2 {
+              font-size: 15px;
+              padding-left: 12px;
+              padding-bottom: 12px;
+              border-bottom: 1px solid #555;
+              font-weight: normal;
+              color: #000;
+              height: 30px;
+              margin-bottom: 20px;
+            }
+            p {
+              font-size: 13px;
+              text-align: right;
+              color: #555;
+            }
+            a {
+              position: absolute;
+              top: 50%;
+              display: none;
+              color: #fff;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+            &:hover {
+              img {
+                opacity: 1;
+              }
+              a {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1179px) {
+  .content {
+    padding: 150px 30px;
+    > .inner {
+      width: 100%;
+    }
+    > .inner nav {
+      float: none;
+      ul {
+        li {
+          float: left;
+          width: 33.3%;
+        }
+        &::after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+      }
+    }
+  }
+
+  .board {
+    .inner {
+      .list {
+        margin-left: 0;
+        .item {
+          width: 33.333% !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 739px) {
+  .board {
+    .inner {
+      .list {
+        margin-left: 0;
+        .item {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+  .content {
+    > .inner {
+      > h2 {
+        margin-left: 0;
+        width: 100%;
+      }
+      p {
+        margin-left: 0;
+        width: 100%;
+      }
+      span {
+        margin-left: 0;
+        width: 100%;
+      }
+      nav {
+        ul {
+          li {
+            float: left;
+            width: 25%;
+            padding-bottom: 15px;
+          }
+          &::after {
+            content: "";
+            display: block;
+            clear: both;
+          }
+        }
+      }
+    }
+  }
+}

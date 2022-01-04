@@ -1,11 +1,11 @@
-function Location(){
+function Board(){
   return (
-    <section className="content location">
+    <section className="content board">
       <div className="inner">
-        <h1>Location</h1>
+        <h2>Board</h2>
       </div>
     </section>
   )
 }
 
-export default Location;
+export default Board;

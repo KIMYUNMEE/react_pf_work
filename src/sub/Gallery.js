@@ -155,7 +155,6 @@ function Gallery(){
     .get(url)
     .then(json=>{      
       setItems(json.data.photos.photo);
-      console.log(json);
     })    
     
    
