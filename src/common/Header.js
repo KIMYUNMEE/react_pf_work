@@ -10,7 +10,7 @@ function Header(){
         </h1>
 
         <ul id="gnb">
-          <li><NavLink activeStyle={active}  to="/department">DEPARTMENT</NavLink></li>
+          <li><NavLink activeStyle={active} exact to="/department">DEPARTMENT</NavLink></li>
           <li><NavLink activeStyle={active}  to="/board">BOARD</NavLink></li>
           <li><NavLink activeStyle={active}  to="/gallery">GALLERY</NavLink></li>
           <li><NavLink activeStyle={active}  to="/youtube">YOUTUBE</NavLink></li>
