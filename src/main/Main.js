@@ -110,6 +110,7 @@ function Main() {
                    <li><a href=""><img src="img/3f8d8f2ab645f6f8a2a0d4d37a423399.jpeg" alt=""></img><b>Ann</b><p>CEO</p></a></li>
                </ul>
             </div>
+            <a href="#" className="btn_show">SHOW ALL</a>
         </div>
         </section>
       </div>
