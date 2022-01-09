@@ -37,7 +37,7 @@ function Gallery(){
 
             getFlickr({
               type: "interest",
-              count: 500
+              count: 10
             });
           }          
         }}>Gallery</h2>
@@ -60,7 +60,7 @@ function Gallery(){
 
               getFlickr({
                 type: "search",
-                count: 500,
+                count: 10,
                 tags: tags 
               });
             }            

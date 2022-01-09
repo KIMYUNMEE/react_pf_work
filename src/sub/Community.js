@@ -34,8 +34,15 @@ function Community(){
         </div>
         <div className="faq">
           <h2>Notice</h2>
-          <div className="title"><span>Faq</span></div>
+          <ul class="notice_tab">
+            <li><a href="">QNA<p>Lorem ipsum dolor sit amet consectetur<br/>adipisicing elit.</p></a></li>
+            <li><a href="">FAQ<p>Lorem ipsum dolor sit amet consectetur<br/>adipisicing elit.</p></a></li>
+            <li><a href="">EVENT<p>Lorem ipsum dolor sit amet consectetur<br/>adipisicing elit.</p></a></li>
+          </ul>
           <div className="answer">
+            <div><span>FAQ</span></div>
+            <div> <input type="text"  placeholder="Your search"/></div>
+             
             
             {
               posts.map((data, index) => {
@@ -43,16 +50,19 @@ function Community(){
             return (
               
               <article key={index}>
-                <h1>{data.title}</h1>
-                <h1>{data.description}</h1>
-                <span>{data.writer}</span>
-                <em>{data.date}</em>
+              <div>
+                <span>{data.number}</span>
+                </div>
+                <div>
+                <strong>{data.title}</strong>
+                <p>{data.description}</p>
+                  <em>{data.date}</em>
+                  </div>
               </article>
             )
           })
           }
           </div>
-         <div className="title"><span>Qna</span></div>
         </div>
       </div>
     </section>

@@ -559,7 +559,7 @@ body {
   position: relative; }
   .gallery .inner .loading {
     position: absolute;
-    top: 60%;
+    top: 25%;
     left: 45%;
     width: 50%;
     width: 200px;
@@ -656,7 +656,32 @@ body {
   .content > .inner nav ul::after {
     content: "";
     display: block;
-    clear: both; } }
+    clear: both; }
+
+  .pop {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 5vw; }
+    .pop img {
+      width: 100%;
+      height: 95%;
+      object-fit: contain;
+      margin-bottom: 15px; }
+    .pop p {
+      font: 14px/1.2 "arial";
+      color: #fff;
+      text-align: center; }
+    .pop span {
+      font: bold 14px/1 "arial";
+      color: #fff;
+      position: absolute;
+      top: 3vw;
+      right: 5vw;
+      cursor: pointer; } }
 .community .inner h2 {
   font-weight: normal;
   font-size: 86px;
@@ -671,6 +696,8 @@ body {
   .community .inner .news .news_img {
     float: left;
     width: 50%; }
+    .community .inner .news .news_img img {
+      width: 100%; }
   .community .inner .news .news_txt {
     float: left;
     width: 50%;
@@ -702,44 +729,207 @@ body {
     content: "";
     clear: both;
     display: block; }
-.community .inner .faq span {
-  font-size: 45px; }
-.community .inner .faq .title {
+.community .inner .faq .notice_tab li {
+  border: 1px solid #000;
   float: left;
-  width: 30%; }
-.community .inner .faq .answer {
-  width: 70%;
-  float: left; }
-  .community .inner .faq .answer p {
-    height: 40px;
-    line-height: 40px;
-    font-size: 20px; }
-    .community .inner .faq .answer p::before {
-      content: "";
-      display: inline-block;
-      clear: both;
-      margin-right: 10px;
-      width: 20px;
-      height: 3px;
-      background: #a2a2a2;
-      vertical-align: middle; }
-    .community .inner .faq .answer p::after {
-      content: "";
-      display: inline-block;
-      clear: both;
-      width: 20px;
-      height: 3px;
-      background: #a2a2a2;
-      transform: rotate(-90deg);
-      margin-left: -206px;
-      vertical-align: middle; }
-  .community .inner .faq .answer article {
-    border-top: 1px solid #bebebe;
-    border-bottom: 1px solid #bebebe; }
-.community .inner .faq::after {
+  width: 33.3%;
+  padding: 22px;
+  font-size: 28px; }
+  .community .inner .faq .notice_tab li a {
+    display: block;
+    margin: 30px 0 10px;
+    color: #000;
+    font-weight: bold; }
+    .community .inner .faq .notice_tab li a p {
+      padding-top: 18px;
+      color: #555;
+      font-size: 12px; }
+.community .inner .faq .notice_tab::after {
   content: "";
   clear: both;
   display: block; }
+.community .inner .faq .answer {
+  padding-top: 50px; }
+  .community .inner .faq .answer > div {
+    float: left;
+    margin-bottom: 25px; }
+    .community .inner .faq .answer > div span {
+      display: block;
+      font-size: 21px;
+      font-weight: 600; }
+  .community .inner .faq .answer > div:nth-child(2) {
+    margin-bottom: 40px;
+    float: right; }
+  .community .inner .faq .answer article {
+    border-top: 1px solid #bebebe;
+    border-bottom: 1px solid #bebebe;
+    padding: 20px 0;
+    width: 100%;
+    float: left; }
+    .community .inner .faq .answer article div {
+      float: left;
+      width: 10%; }
+      .community .inner .faq .answer article div span {
+        color: #555; }
+    .community .inner .faq .answer article div:nth-child(2) {
+      float: left;
+      width: 90%; }
+      .community .inner .faq .answer article div:nth-child(2) strong {
+        font-size: 17spx; }
+      .community .inner .faq .answer article div:nth-child(2) p {
+        padding: 5px 0;
+        font-size: 14px; }
+      .community .inner .faq .answer article div:nth-child(2) em {
+        font-size: 12px; }
+  .community .inner .faq .answer::after {
+    content: "";
+    clear: both;
+    display: block; }
+
+.department .inner strong {
+  font-size: 80px;
+  line-height: 90px;
+  font-weight: 500; }
+.department .inner > div {
+  margin-top: 48px;
+  padding-top: 38px;
+  border-top: 1px solid #000; }
+  .department .inner > div .img_wrap {
+    margin-left: 220px;
+    height: 550px; }
+    .department .inner > div .img_wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .department .inner > div > p {
+    margin: 45px 0 0 220px;
+    font-size: 14px;
+    line-height: 18px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #000; }
+  .department .inner > div .btn_process {
+    font-size: 11px;
+    font-weight: bold;
+    margin-left: 220px;
+    color: #666;
+    display: block;
+    text-decoration-line: underline;
+    margin-top: 20px; }
+  .department .inner > div h2 {
+    margin-top: 135px;
+    font-size: 33px;
+    font-weight: normal;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #000; }
+  .department .inner > div span {
+    padding-top: 20px;
+    width: 37vw;
+    display: block;
+    font-size: 12px;
+    line-height: 15px; }
+  .department .inner > div ul {
+    margin-top: 20px;
+    border-bottom: 1px solid #000; }
+    .department .inner > div ul li {
+      float: left;
+      width: 33.3%; }
+      .department .inner > div ul li a {
+        padding-right: 18px;
+        display: block; }
+        .department .inner > div ul li a img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+        .department .inner > div ul li a p {
+          padding-top: 16px;
+          padding-bottom: 40px;
+          font-size: 13px;
+          color: #666; }
+    .department .inner > div ul::after {
+      content: "";
+      clear: both;
+      display: block; }
+  .department .inner > div .btn_more {
+    font-size: 11px;
+    font-weight: bold;
+    color: #666;
+    display: block;
+    text-decoration-line: underline;
+    margin-top: 20px; }
+  .department .inner > div > b {
+    margin-top: 135px;
+    font-weight: normal;
+    font-size: 33px;
+    padding-bottom: 20px;
+    display: block; }
+  .department .inner > div table {
+    width: 100%;
+    margin-bottom: 30px;
+    border-collapse: collapse; }
+    .department .inner > div table td {
+      padding: 15px;
+      border-bottom: 2px solid #9f9f9f;
+      text-align: center;
+      font-size: 11px;
+      color: #474747; }
+      .department .inner > div table td :nth-of-type(2) {
+        text-align: left; }
+        .department .inner > div table td :nth-of-type(2) a {
+          float: left;
+          color: #333;
+          font-family: "arial";
+          line-height: 1.4; }
+    .department .inner > div table th {
+      padding: 20px;
+      color: #b7b7b7;
+      font-size: 10px;
+      border-bottom: 2px solid #c3c3c3; }
+      .department .inner > div table th:nth-of-type(1) {
+        width: 20%; }
+      .department .inner > div table th:nth-of-type(2) {
+        width: 50%; }
+      .department .inner > div table th:nth-of-type(3) {
+        width: 30%; }
+  .department .inner > div .wrap01 {
+    margin-left: 220px; }
+    .department .inner > div .wrap01 ul li {
+      float: left;
+      width: 33.3%;
+      padding-left: 14px;
+      padding-bottom: 22px; }
+      .department .inner > div .wrap01 ul li a b {
+        padding: 13px 0 9px;
+        display: block;
+        font-size: 11px;
+        color: #595959; }
+      .department .inner > div .wrap01 ul li a p {
+        font-size: 10px;
+        color: #b1b1b1;
+        padding-top: 0;
+        padding-bottom: 0; }
+  .department .inner > div .btn_show {
+    margin-left: 220px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #666;
+    display: block;
+    text-decoration-line: underline;
+    margin-top: 20px; }
+  .department .inner > div .txt_project {
+    margin-top: 140px;
+    font-size: 50px;
+    color: #000;
+    margin-left: 220px;
+    font-weight: normal;
+    display: block; }
+  .department .inner > div .contact {
+    padding-top: 18px;
+    margin-left: 220px;
+    display: inline-block;
+    font-size: 11px;
+    color: #666;
+    text-decoration-line: underline;
+    padding-right: 8px; }
 
 .youtube .inner .frame::after {
   content: "";
