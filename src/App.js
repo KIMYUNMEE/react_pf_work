@@ -7,7 +7,7 @@ import Department from "./sub/Department.js";
 import Community from "./sub/Community.js";
 import Gallery from "./sub/Gallery.js";
 import Location from "./sub/Location.js";
-import Membership from "./sub/Membership.js";
+import Join from "./sub/Join.js";
 import Youtube from "./sub/Youtube.js";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
       <Route  path="/gallery" component={Gallery}></Route>
       <Route  path="/youtube" component={Youtube}></Route>
       <Route path="/location" component={Location}></Route>
-      <Route  path="/membership" component={Membership}></Route>  
+      <Route  path="/join" component={Join}></Route>  
           
       <Footer />      
     </div>
