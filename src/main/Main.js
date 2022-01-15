@@ -75,7 +75,8 @@ function Main() {
                     <div className="wrap03">
                         <span>About us</span>
                         <p>Snohetta is a place that<br/>nobody is from, but<br/>anyone can go to.</p>
-                        <a href="">DISCOVER</a><i class="fas fa-long-arrow-alt-right"></i>
+                            <a href="">DISCOVER</a>
+                            {/* <i class="fas fa-long-arrow-alt-right"></i> */}
                     </div>
     </div>
         </section>
@@ -93,7 +94,8 @@ function Main() {
                             <img src={path + "/img/493b4aed433ebbe96ab8f0f17cbe02ca_1024w.jpeg"} />
                     </div>
                     <strong>Start a project?</strong>
-                    <a href="" className="contact">CONTACT US</a><i class="fas fa-long-arrow-alt-right"></i>
+                        <a href="" className="contact">CONTACT US</a>
+                        {/* <i class="fas fa-long-arrow-alt-right"></i> */}
     </div>
         </section>
       </div>
@@ -167,7 +169,7 @@ function Main() {
                     <li><a href="">
                         <img src={path + "/img/03b1c5abb9b6232e6e9a39059cc5ceeb_500w.jpg"} />
                                    </a>
-                    <bn>Nov 5, 2020 | News</bn>
+                    <b>Nov 5, 2020 | News</b>
                     <p>Snøhetta Signs Call on Carbon Initiative</p>
                     <span>On October 1, Snøhetta was honored as the recipient of the 2020 National Design Award for Architecture, bestowed by
                         Cooper Hewitt, Smithsonian Design Museum. Recognized at the annual gala, held virtually for the first time due to

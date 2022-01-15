@@ -20,7 +20,7 @@ Our work strives to enhance our sense of surroundings, identity and relationship
           <a href="" className="btn_more">SHOW MORE</a>
           <b>Selected Awards</b>
             <table summary="게시글 번호, 게시글 제목, 작성자, 작성일을 포함한 자유게시판">
-                <caption class="hide">회원 자유게시판</caption>
+                <caption className="hide">회원 자유게시판</caption>
                <thead>
                    <th>Year</th>
                    <th>Award</th>

@@ -1,0 +1,131 @@
+.location {
+  .inner {
+    #map {
+      width: 100%;
+      height: 500px;
+      background: #000;
+      filter: grayscale(50%);
+    }
+    .traffic {
+      padding-top: 8px;
+      float: right;
+      li {
+        cursor: pointer;
+        float: left;
+        padding: 0 8px;
+        color: lightgray;
+        font-size: 17px;
+        &:nth-child(1) {
+          color: #000;
+          font-size: 15px;
+          cursor: none;
+        }
+      }
+      &::after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+    }
+    .branch {
+      margin-top: 100px;
+      li {
+        border-bottom: 1px solid #333;
+        margin-left: 40px;
+        float: left;
+        width: calc(33.3% - 40px);
+        color: #333;
+        cursor: pointer;
+        font-size: 19px;
+        font-weight: bold;
+        padding-bottom: 15px;
+        &.off {
+          border-bottom: none;
+          margin-left: 0;
+          margin-right: 40px;
+          font-size: 15px;
+          padding-top: 9px;
+        }
+        &.on {
+          color: lightcoral;
+        }
+        &:first-child {
+          margin-left: 0;
+        }
+        p {
+          color: #666;
+          font-size: 12px;
+          padding: 3px 0;
+        }
+      }
+      &::after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+    }
+    .contact {
+      h3 {
+        margin-top: 135px;
+        font-size: 36px;
+        font-weight: normal;
+        padding-bottom: 18px;
+        border-bottom: 1px solid #000;
+        .txt {
+          font-size: 17px;
+          color: #666;
+          display: block;
+          line-height: 25px;
+          padding-bottom: 15px;
+        }
+      }
+      div {
+        float: left;
+        width: 50%;
+        padding-top: 20px;
+        span {
+          font-size: 26px;
+          color: #4c4c4c;
+          line-height: 40px;
+        }
+        ul {
+          li {
+            input[type="text"] {
+              width: 100%;
+              border: none;
+              border-bottom: 2px solid #b6b6b6;
+              height: 50px;
+              line-height: 50px;
+              padding-left: 5px;
+            }
+            input::placeholder {
+              font-size: 12px;
+            }
+            input[type="number"] {
+              width: 100%;
+              border: none;
+              border-bottom: 2px solid #b6b6b6;
+              height: 50px;
+              line-height: 50px;
+              padding-left: 5px;
+            }
+            .btn_send {
+              font-size: 11px;
+              font-weight: bold;
+              color: #666;
+              display: block;
+              text-decoration-line: underline;
+              margin-top: 40px;
+            }
+          }
+        }
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+  }
+}

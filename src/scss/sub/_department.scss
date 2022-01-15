@@ -101,15 +101,12 @@
           border-bottom: 2px solid #9f9f9f;
           text-align: center;
           font-size: 11px;
-          color: #474747;
+          color: #333;
+          a {
+            color: #333;
+          }
           :nth-of-type(2) {
             text-align: left;
-            a {
-              float: left;
-              color: #333;
-              font-family: "arial";
-              line-height: 1.4;
-            }
           }
         }
         th {

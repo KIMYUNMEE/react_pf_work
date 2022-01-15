@@ -436,6 +436,7 @@ body {
     min-height: 700px;
 
     > h2 {
+      text-align: right;
       font-weight: normal;
       font-size: 86px;
       color: #000;
@@ -502,6 +503,17 @@ body {
             font-size: 11px;
             color: #bbb;
           }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1179px) {
+  header {
+    .inner {
+      h1 {
+        a {
+          font-size: 100px;
         }
       }
     }
