@@ -4,8 +4,7 @@ import {NavLink} from "react-router-dom";
 
 function Header(){
   const active = {color: "#000"};
-  const btnCall = document.querySelector(".btnCall"); 
-const menuMo = document.querySelector(".menuMo"); 
+ 
   return (  
     <header>
       <div className="inner">
@@ -25,12 +24,14 @@ const menuMo = document.querySelector(".menuMo");
    
         <a href="#" className="btnCall" onClick={(e) => {
           e.preventDefault();
+           const btnCall = document.querySelector(".btnCall"); 
+const menuMo = document.querySelector(".menuMo"); 
      btnCall.classList.toggle("on"); 
     menuMo.classList.toggle("on");
         }}>
                 <span>메뉴호출</span>
             </a>
-            <nav class="menuMo">
+            <nav className="menuMo">
                 <h1>
                     <a href="#">Snohetta</a>
           </h1>
