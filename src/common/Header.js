@@ -1,7 +1,11 @@
 import {NavLink} from "react-router-dom";
 
+
+
 function Header(){
   const active = {color: "#000"};
+  const btnCall = document.querySelector(".btnCall"); 
+const menuMo = document.querySelector(".menuMo"); 
   return (  
     <header>
       <div className="inner">
@@ -17,6 +21,31 @@ function Header(){
           <li><NavLink activeStyle={active}  to="/location">LOCATION</NavLink></li>
           <li><NavLink activeStyle={active}  to="/join">JOIN</NavLink></li>
         </ul>
+
+   
+        <a href="#" className="btnCall" onClick={(e) => {
+          e.preventDefault();
+     btnCall.classList.toggle("on"); 
+    menuMo.classList.toggle("on");
+        }}>
+                <span>메뉴호출</span>
+            </a>
+            <nav class="menuMo">
+                <h1>
+                    <a href="#">Snohetta</a>
+          </h1>
+         
+                <ul id="gnbMo">
+            <li><NavLink activeStyle={active} exact to="/department">DEPARTMENT</NavLink></li>
+            <li><NavLink activeStyle={active}  to="/community">COMMUNITY</NavLink></li>
+              <li><NavLink activeStyle={active}  to="/gallery">GALLERY</NavLink></li>
+                    <li><NavLink activeStyle={active}  to="/youtube">YOUTUBE</NavLink></li>
+                    
+                  
+                    <li><NavLink activeStyle={active}  to="/location">LOCATION</NavLink></li>
+                    <li><NavLink activeStyle={active}  to="/join">JOIN</NavLink></li>
+                </ul>
+            </nav>
       </div>
     </header>
   )

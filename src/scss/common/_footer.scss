@@ -89,22 +89,28 @@ body {
   }
 }
 
-@media screen and (max-width: 1179px) {
-  #footer {
-    width: 100%;
-    .inner {
-      width: 100%;
-    }
-  }
-}
 @media screen and (max-width: 739px) {
   #footer {
     width: 100%;
     .inner {
       width: 100%;
+      h1 {
+        float: none;
+      }
+      .wrap01 {
+        float: none;
+        margin-left: 0;
+        ul {
+          li {
+            width: 50%;
+            a {
+              font-size: 9px;
+            }
+          }
+        }
+      }
       p {
-        text-align: left;
-        color: red;
+        text-align: center;
       }
     }
   }

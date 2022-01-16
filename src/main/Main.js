@@ -144,8 +144,7 @@ function Main() {
                         <p>Snøhetta wins Cooper Hewitt National Design Award</p>
                         <span>On October 1, Snøhetta was honored as the recipient of the 2020 National Design Award for Architecture, bestowed by
                         Cooper Hewitt, Smithsonian Design Museum. Recognized at the annual gala, held virtually for the first time due to the
-                        pandemic, the trans-disciplinary studio was selected for the impact of their designs, particularly in the areas of
-                        social and environmental sustainability.</span>
+                        pandemic, the trans-disciplinary studio.</span>
                     </li>
                                 <li><a href="">
                                     <img src={path + "/img/98cf24ddfc29d5c437c950d7d1e28153_500w.jpeg"} /></a>

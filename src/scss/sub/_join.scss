@@ -144,42 +144,94 @@
 }
 
 @media screen and (max-width: $web) {
-  .join .inner table td {
-    input[type="text"],
-    input[type="password"],
-    select {
-      width: 90%;
-    }
-    textarea {
-      width: 90%;
+  .join {
+    .inner {
+      table {
+        td {
+          input[type="text"],
+          input[type="password"],
+          select {
+            width: 90%;
+          }
+          textarea {
+            width: 90%;
+          }
+        }
+      }
     }
   }
 }
 
 @media screen and (max-width: $tablet) {
-  .join .inner table th {
-    position: absolute;
-    top: -99999px;
-    opacity: 0;
-
-    &.btnSet {
-      position: relative;
-      top: 0px;
-      opacity: 1;
+  .join {
+    .inner {
+      h2 {
+        font-size: 70px;
+      }
+      h3 {
+        font-size: 23px;
+      }
+      table {
+        // th {
+        //   position: absolute;
+        //   top: -99999px;
+        //   opacity: 0;
+        //   &.btnSet {
+        //     position: relative;
+        //     top: 0px;
+        //     opacity: 1;
+        //   }
+        // }
+      }
     }
   }
 
-  .join .inner table td {
-    input[type="text"],
-    input[type="password"],
-    select {
-      width: 100%;
-    }
-    textarea {
-      width: 100%;
+  .join {
+    .inner {
+      h2 {
+        font-size: 40px;
+      }
+      h3 {
+        font-size: 20px;
+      }
+      table {
+        td {
+          input[type="text"],
+          input[type="password"],
+          select {
+            width: 100%;
+          }
+          textarea {
+            width: 100%;
+          }
+        }
+      }
     }
   }
 }
 
 @media screen and (max-width: $mobile) {
+  .join .inner form table th,
+  .join .inner form fieldset th {
+    width: 30%;
+    line-height: 25px;
+  }
+  .join .inner form table td input[type="text"],
+  .join .inner form table td input[type="password"],
+  .join .inner form table td select,
+  .join .inner form fieldset td input[type="text"],
+  .join .inner form fieldset td input[type="password"],
+  .join .inner form fieldset td select {
+    width: 80%;
+  }
+  .join .inner form .mem .member_wrap .member p {
+    font-size: 17px;
+    margin-top: 25px;
+  }
+  .join .inner form table th,
+  .join .inner form table td,
+  .join .inner form fieldset th,
+  .join .inner form fieldset td {
+    padding: 10px 15px;
+  }
 }

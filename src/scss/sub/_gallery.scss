@@ -27,8 +27,8 @@
         width: 100%;
 
         .item {
-          width: 50%;
-          padding: 20px;
+          width: calc(33.3% - 30px);
+          margin: 15px;
           float: left;
 
           .inner {
@@ -52,7 +52,6 @@
               border-bottom: 1px solid #555;
               font-weight: normal;
               color: #000;
-              height: 30px;
             }
             p {
               font-size: 13px;
@@ -134,11 +133,27 @@
 
   .gallery {
     .inner {
+      h2 {
+        margin-left: 0;
+        display: block;
+      }
+      p {
+        margin-left: 0;
+      }
       .list {
         margin-left: 0;
-        .item {
-          width: 33.333% !important;
+        ul {
+          .item {
+            .inner {
+              h2 {
+                padding-bottom: 20px;
+              }
+            }
+          }
         }
+      }
+      span {
+        margin-left: 0;
       }
     }
   }
@@ -147,15 +162,23 @@
 @media screen and (max-width: 739px) {
   .gallery {
     .inner {
+      h2 {
+        margin-left: 0;
+        font-size: 70px;
+      }
       .list {
         margin-left: 0;
-        .item {
-          width: 100% !important;
+        ul {
+          .item {
+            width: calc(50% - 20px);
+            margin: 10px;
+          }
         }
       }
     }
   }
   .content {
+    padding: 100px 30px;
     > .inner {
       > h2 {
         margin-left: 0;
@@ -184,5 +207,28 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .gallery {
+    .inner {
+      h2 {
+        font-size: 40px;
+      }
+      .list {
+        margin-left: 0;
+        ul {
+          .item {
+            width: 100%;
+            float: none;
+            margin: 16px;
+          }
+        }
+      }
+    }
+  }
+  .content {
+    padding: 50px 20px;
   }
 }

@@ -1,6 +1,20 @@
-const path=process.env.PUBLIC_URL;
+import axios from "axios";
+import {useEffect, useState} from "react";
 function Department() {
+   let [posts, setPosts] = useState([]);
+  const path= process.env.PUBLIC_URL;
+  const url = `${path}/db/department.json`;
+  useEffect(()=>{
+    axios
+      .get(url)
+      .then(json=>{
+        console.log(json.data.data);
+        setPosts(json.data.data);
+      })
+  },[]);
+  
   return (
+    
     <section className="content department">
       <div className="inner">
         <strong>Snohetta is a place that nobody<br />is from, but anyone can go to.</strong>
@@ -60,7 +74,8 @@ Our work strives to enhance our sense of surroundings, identity and relationship
           <h2>Pepole</h2>
            <div className="wrap01">
             <ul>
-              <li><a href=""><img src={path + "/img/21dcee5f3518b517dd549d33ca245755.jpeg"} /><b>Alex</b><p>Co-founder</p></a></li>
+              <li><a href=""><img src={path + "/img/21dcee5f3518b517dd549d33ca245755.jpeg"} />
+              <b>Alex</b><p>Co-founder</p></a></li>
               
               <li><a href=""><img src={path + "/img/0a83df4119de27d5b9833af30d52d16e.jpeg"} /><b>Jess</b><p>Art director</p></a></li>
               <li><a href=""><img src={path + "/img/1c555928970e09d1f70439b7ec4b7c1d.jpeg"} /><b>Max</b><p>Lead architect</p></a></li>
@@ -75,8 +90,14 @@ Our work strives to enhance our sense of surroundings, identity and relationship
             <strong className="txt_project">Start a project?</strong>
                     <a href="" className="contact">CONTACT US</a>
       </div>
+      
+            
+            
+        
       </div>
+      
     </section>
+    
   )
 }
 
