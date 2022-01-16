@@ -1,10 +1,28 @@
 .join {
   .inner {
     h3 {
-      font-size: 33px;
+      margin-top: 50px;
+      font-size: 30px;
       font-weight: normal;
       padding-bottom: 20px;
       border-bottom: 1px solid #000;
+    }
+    .join_box {
+      position: relative;
+      border-top: 1px solid #666;
+      border-bottom: 1px solid #666;
+      text-align: center;
+      font-weight: bold;
+      padding: 42px;
+      margin-bottom: 40px;
+      &::before {
+        content: "Sign up order";
+        clear: both;
+        position: absolute;
+        left: 0;
+        top: 5px;
+        font-size: 11px;
+      }
     }
     form {
       .h {
@@ -18,7 +36,12 @@
         th,
         td {
           border-bottom: 1px solid #ddd;
-          padding: 10px 30px;
+          padding: 20px 30px;
+          p {
+            font-size: 11px;
+            color: lightcoral;
+            padding-bottom: 10px;
+          }
         }
         th {
           width: 25%;
@@ -61,13 +84,6 @@
             padding: 10px 20px;
             border: 1px solid #aaa;
           }
-          textarea {
-            width: 60%;
-            height: 150px;
-            padding: 10px 20px;
-            border: 1px solid #aaa;
-            resize: none;
-          }
           label {
             font: 12px/1 "arial";
             color: #777;
@@ -79,11 +95,50 @@
           }
         }
       }
+      .mem {
+        .member_wrap {
+          .member {
+            p {
+              margin-top: 35px;
+              font-weight: 500;
+              font-size: 21px;
+              color: #000;
+              padding-bottom: 18px;
+            }
+            textarea {
+              width: 100%;
+              height: 150px;
+              padding: 10px 20px;
+              border: 1px solid #aaa;
+              color: #666;
+              resize: none;
+              margin-bottom: 15px;
+            }
+            input[type="checkbox"] {
+              display: inline-block;
+              margin-right: 7px;
+              margin-left: 7px;
+            }
+            label {
+              font-size: 14px;
+              color: #000;
+            }
+          }
+        }
+      }
+
       .err {
         padding-left: 20px;
         font: 11px/1 "맑은 고딕";
         color: lightcoral;
       }
+    }
+    textarea {
+      width: 60%;
+      height: 150px;
+      padding: 10px 20px;
+      border: 1px solid #aaa;
+      resize: none;
     }
   }
 }

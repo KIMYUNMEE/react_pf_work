@@ -499,9 +499,11 @@ body {
       ul {
         li {
           padding-bottom: 24px;
-          a {
+          button {
+            background-color: #fff;
             font-size: 11px;
             color: #bbb;
+            border: none;
           }
         }
       }

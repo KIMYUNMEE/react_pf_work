@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState, useRef } from "react";
 import Masonry from "react-masonry-component";
+const body = document.querySelector("body");
 
 const path=process.env.PUBLIC_URL;
 
@@ -17,6 +18,8 @@ function Gallery(){
   let [interest, setInterest] = useState(true);
   let list = useRef(null);
   let input = useRef(null);
+  let [isPop, setIsPop] = useState(false);
+   let [index, setIndex] = useState(0);
   
   useEffect(()=>{ 
     getFlickr({
@@ -60,14 +63,14 @@ function Gallery(){
 
               getFlickr({
                 type: "search",
-                count: 10,
+                count: 500,
                 tags: tags 
               });
             }            
           }}  placeholder="Your search"/>
           <button onClick={()=>{
             if(enableClick){
-              const tags = input.current.value; 
+              const tags = input.current.value;       
               if(tags==="") return;  
 
               setEnableClick(false);  
@@ -81,7 +84,7 @@ function Gallery(){
               getFlickr({
                 type: "search",
                 count: 500,
-                tags: tags 
+                tags: tags
               });
             }
           }}>Search</button>
@@ -92,12 +95,118 @@ function Gallery(){
         
         <nav>
           <ul>
-            <li><a href="">ALL GALLERY</a></li>
-            <li><a href="">ARCHITECTURE</a></li>
-            <li><a href="">LANDSCAPE</a></li>
-            <li><a href="">INTERIOR</a></li>
-            <li><a href="">GRAPHIC DESIGN</a></li>
-            <li><a href="">PRODUCT DESIGN</a></li>
+            <li>
+                <button onClick={()=>{
+            if(enableClick){
+              const tags = input.current.value;   
+              if(tags==="") return;  
+
+              setEnableClick(false);  
+              setInterest(false);             
+              list.current.classList.remove("on");         
+              setLoading(true);
+             
+                         
+              input.current.value = "";
+
+              getFlickr({
+                type: "search",
+                count: 2,
+                tags: tags
+              });
+            }
+          }}>ALL GALLERY</button></li>
+            <li> <button onClick={()=>{
+            if(enableClick){
+              const tags = "ARCHITECTURE";   
+              if(tags==="") return;  
+
+              setEnableClick(false);  
+              setInterest(false);             
+              list.current.classList.remove("on");         
+              setLoading(true);
+             
+                         
+     
+
+              getFlickr({
+                type: "search",
+                count: 10,
+                tags: tags
+              });
+            }
+          }}>ARCHITECTURE</button></li>
+            <li><button onClick={()=>{
+            if(enableClick){
+              const tags = "LANDSCAPE";   
+              if(tags==="") return;  
+
+              setEnableClick(false);  
+              setInterest(false);             
+              list.current.classList.remove("on");         
+              setLoading(true);
+             
+                         
+     
+
+              getFlickr({
+                type: "search",
+                count: 10,
+                tags: tags
+              });
+            }
+          }}>LANDSCAPE</button></li>
+            <li><button onClick={()=>{
+            if(enableClick){
+              const tags = "INTERIOR";   
+              if(tags==="") return;  
+
+              setEnableClick(false);  
+              setInterest(false);             
+              list.current.classList.remove("on");         
+              setLoading(true);
+             
+              getFlickr({
+                type: "search",
+                count: 10,
+                tags: tags
+              });
+            }
+          }}>INTERIOR</button></li>
+            <li><button onClick={()=>{
+            if(enableClick){
+              const tags = "GRAPHIC DESIGN";   
+              if(tags==="") return;  
+
+              setEnableClick(false);  
+              setInterest(false);             
+              list.current.classList.remove("on");         
+              setLoading(true);
+             
+              getFlickr({
+                type: "search",
+                count: 10,
+                tags: tags
+              });
+            }
+          }}>GRAPHIC DESIGN</button></li>
+            <li><button onClick={()=>{
+            if(enableClick){
+              const tags = "PRODUCT DESIGN";   
+              if(tags==="") return;  
+
+              setEnableClick(false);  
+              setInterest(false);             
+              list.current.classList.remove("on");         
+              setLoading(true);
+             
+              getFlickr({
+                type: "search",
+                count: 10,
+                tags: tags
+              });
+            }
+          }}>PRODUCT DESIGN</button></li>
         </ul>
         </nav>
       
@@ -117,9 +226,16 @@ function Gallery(){
                   <li key={index} className="item">                  
                     <div className="inner" >
                       <h2>{item.title}</h2>
-                      <img src={imgSrc} />
+                        <div className="pic" onClick={()=>{
+                      setIsPop(true);
+                      //버튼 클릭시 index state변경
+                      setIndex(index);
+                      console.log(index);
+                    }}>   <img src={imgSrc} /></div>
+                      
+                   
                       <p>{item.owner}</p>
-                      <a href="">View more</a>
+                      <b>View more</b>
 
                     </div>
                   </li>
@@ -131,9 +247,33 @@ function Gallery(){
         </div>
         
       </div>
-      
+      { isPop ? <Pop /> : null }
     </section>
   )  
+    function Pop(){
+    //컴포넌트 상단에 있는 items, index스테이트값을 활용해서
+    //items라는 배열에서 index번째의 객체값의 키값을 사용해서 이미지 url생성
+    const imgSrc = `https://live.staticflickr.com/${items[index].server}/${items[index].id}_${items[index].secret}_b.jpg`;
+    useEffect(()=>{
+      console.log("pop 생성")
+      body.style.overflow = "hidden";
+      return ()=>{
+        console.log("pop 제거");
+        body.style.overflow = "auto";
+      }
+    },[]);
+    return (
+      <aside className="pop">
+        {/* 해당 이미지 url적용 */}
+        <img src={imgSrc} />
+        {/* items의 index번째 객체 안에 있는 텍스트 */}
+        <p>{items[index].title}</p>
+        <span onClick={()=>{
+          setIsPop(false);
+        }}>Close</span>
+      </aside>
+    )
+  }
   async function getFlickr(opt){ 
     let url = "";
     
