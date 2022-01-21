@@ -6,7 +6,7 @@ function Header(){
   const active = {color: "#000"};
  
   return (  
-    <header>
+    <header className="myScroll">
       <div className="inner">
         <h1>
         <NavLink activeStyle={active} exact to="/">Snohetta</NavLink>

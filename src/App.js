@@ -1,4 +1,4 @@
-import {Route} from "react-router-dom";
+import {Route,Switch} from "react-router-dom";
 import "./css/style.css";
 import Header from "./common/Header.js";
 import Footer from "./common/Footer.js";
@@ -13,8 +13,19 @@ import Youtube from "./sub/Youtube.js";
 function App() {
   return (
     <div className="App"> 
-      <Header />
-      <Route exact path="/" component={Main}></Route> 
+  
+        <Switch>
+        <Route exact path="/">
+          <Main />
+        </Route> 
+
+        <Route path='/'>
+          <Header type={'sub'} />
+        </Route>
+      </Switch>   
+
+    
+      {/* <Route exact path="/" component={Main}></Route>  */}
       <Route  path="/department" component={Department}></Route>
       <Route  path="/Community" component={Community}></Route>
       <Route  path="/gallery" component={Gallery}></Route>

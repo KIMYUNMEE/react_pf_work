@@ -1084,6 +1084,56 @@ body {
     content: "";
     clear: both;
     display: block; }
+.community .inner .inputBox {
+  width: 100%;
+  padding: 50px;
+  margin-bottom: 50px;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  text-align: center; }
+  .community .inner .inputBox input {
+    width: 60%;
+    padding: 15px 10px;
+    border: 1px solid #bbb;
+    margin-bottom: 10px; }
+  .community .inner .inputBox textarea {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    margin-bottom: 15px;
+    resize: none; }
+  .community .inner .inputBox button {
+    width: 150px;
+    height: 40px;
+    background: #777;
+    border: none;
+    color: #fff;
+    margin-right: 10px; }
+.community .inner .showBox article {
+  padding: 30px 40px;
+  border: 1px solid #bebebe;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center; }
+  .community .inner .showBox article .post {
+    width: 70%; }
+  .community .inner .showBox article .btns {
+    display: inline-flex;
+    justify-content: center;
+    font-size: 0;
+    align-items: center; }
+    .community .inner .showBox article .btns li {
+      margin: 5px;
+      border: none;
+      background: none;
+      display: inline-block;
+      font: 12px/1 "arial";
+      color: darkgreen;
+      cursor: pointer; }
+      .community .inner .showBox article .btns li:nth-of-type(2) {
+        color: red; }
 
 @media screen and (max-width: 739px) {
   .community .inner h2 {
@@ -1771,5 +1821,53 @@ body {
         font-size: 11px; }
         .location .inner .branch li.off p {
           font-size: 10px; } }
+#btns {
+  position: fixed;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%); }
+  #btns li {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background: #888;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: 0.5s; }
+    #btns li.on {
+      height: 80px;
+      background: #666; }
+
+#info {
+  width: 100%;
+  position: relative; }
+
+#intro {
+  width: 100%;
+  position: relative; }
+
+#news {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  padding: 150px 0px; }
+  #news .inner {
+    width: 1180px;
+    margin: 0px auto;
+    position: relative; }
+    #news .inner h2 {
+      text-align: center;
+      margin-bottom: 110px; }
+    #news .inner .txtBox article {
+      float: left;
+      width: calc(100% / 6);
+      margin-right: 10px;
+      border: 1px solid #eee;
+      padding: 20px;
+      height: 400px; }
+
+figure {
+  width: 100%;
+  height: calc(100vh - 80px); }
 
 /*# sourceMappingURL=style.css.map */
