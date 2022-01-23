@@ -1,10 +1,13 @@
 import { combineReducers } from "redux";
 //초기상태로 들어갈 값
+
 const initMember = {
+  
   members: [
-    {name:'David', position:'CEO'},
-    {name:'Emma', position:'Designer'},
-    {name:'Michael', position:'Developer'}
+  
+    {image:"process.env.PUBLIC_URL/img/21dcee5f3518b517dd549d33ca245755.jpeg", name:'David', position:'CEO'},
+    
+    {image:"process.env.PUBLIC_URL/img/21dcee5f3518b517dd549d33ca245755.jpeg", name:'Michael', position:'Developer'}
   ]
 }
 const memberReducer=(state=initMember, action)=>{

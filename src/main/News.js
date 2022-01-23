@@ -1,33 +1,32 @@
 
 import { useEffect, useState } from "react/cjs/react.development";
 function News() {
-         
+          const basic = [        
+    {title: 'Hello1', content: 'Here comes description in detail.' ,date:'2021-01-01'},  
+    {title: 'Hello2', content: 'Here comes description in detail.',date:'2021-02-01'},  
+    {title: 'Hello3', content: 'Here comes description in detail.',date:'2021-03-01'},  
+    {title: 'Hello4', content: 'Here comes description in detail.',date:'2021-04-01'},  
+    {title: 'Hello5', content: 'Here comes description in detail.',date:'2021-05-01'},  
+    {title: 'Hello6', content: 'Here comes description in detail.',date:'2021-06-01'}      
+  ];  
   
-  const getLocalItems=()=>{
+  const getLocalItems = () => {
     let data = localStorage.getItem('posts');
 
     if (data) {
       
-      let result = JSON.parse(data);
-      result = result.splice(0,6);
-      return result;
+      return JSON.parse(data);
+    
     } else {
-     
-      return [
-
-         {  sr:'../img/21dcee5f3518b517dd549d33ca245755.jpeg', title: 'Hello0', content: 'Here comes description in detail.'},
-        {sr:'../img/1b81f603faf67d4874078616a3e4827a.jpeg', title: 'Hello112345', content: 'Here comes description in detail.'},  
-        {sr:'../img/21dcee5f3518b517dd549d33ca245755.jpeg', title: 'Hello2', content: 'Here comes description in detail.'},  
-        {sr:'../img/21dcee5f3518b517dd549d33ca245755.jpeg', title: 'Hello3', content: 'Here comes description in detail.'}    
-      ];
+      return basic;
     }
-    }
+  }
  
    const [posts]= useState(getLocalItems);
 
   useEffect(()=>{
     localStorage.setItem('posts', JSON.stringify(posts));
-  },[posts])
+  },[])
         
   return (
     <section id='news' className='contents_about05 myScroll'>
@@ -37,14 +36,17 @@ function News() {
         <div className="txtBox">
 
           {
-            posts.map((post,index)=>{
+            posts.map((post, index) => {
+              if (index < 6) {
+          
               return (
                 <article key={index}>
-                  <img src={post.sr} alt="상자"></img>
                   <h3>{post.title}</h3>
                   <p>{post.content}</p>
+                  <p>{post.date}</p>
                 </article>
-              )
+                )      
+              }
             })
           }
         </div>

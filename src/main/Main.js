@@ -7,6 +7,7 @@ import Btns from './Btns.js';
 import Process from './Process.js';
 import Team from './Team.js';
 import Banner from './Banner.js';
+import You from './You.js';
 import Anime from '../class/anime.js';
 import { useEffect, useState, useRef } from 'react';
 
@@ -62,7 +63,9 @@ function Main() {
             <Process />
             <Team />
             <News />
+               <You />
             <Banner />
+         
             <Btns getIndex={getIndex} />
         </div>
     )

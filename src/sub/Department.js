@@ -1,9 +1,21 @@
 import axios from "axios";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { setMembers } from '../redux/actions';
+
 function Department() {
    let [posts, setPosts] = useState([]);
   const path= process.env.PUBLIC_URL;
   const url = `${path}/db/department.json`;
+   const members = useSelector(state=>state.memberReducer.members);
+  console.log(members);
+  const dispatch = useDispatch();
+
+  const newMember = [
+   {image:"path/img/21dcee5f3518b517dd549d33ca245755.jpeg", name:'David', position:'CEO'},
+    
+    {image:"img/worker11.jpg", name:'Michael', position:'Developer123444'}
+  ]
   useEffect(()=>{
     axios
       .get(url)
@@ -92,7 +104,9 @@ Our work strives to enhance our sense of surroundings, identity and relationship
       </div>
       
             
-            
+             <button onClick={()=>{
+          dispatch(setMembers(newMember))        
+        }}>맴버 변경</button>
         
       </div>
       

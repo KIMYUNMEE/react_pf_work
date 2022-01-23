@@ -1,10 +1,23 @@
+
+import { useSelector } from "react-redux";
 function Team() {
-      const path= process.env.PUBLIC_URL;
+     const members = useSelector(state=>state.memberReducer.members);
   return (
       <section id="team" className="contents_about04 myScroll">
                         <div className="inner">
-                            <h2>Our team</h2>
-                            <div className="wrap01">
+              <h2>Our team</h2>
+                {
+          members.map((member, index)=>{
+            return (
+              <article key={index} className="wrap01">
+                <h3>{member.name}</h3>
+                <p>{member.position}</p>
+                <img src={member.image}></img>
+              </article>
+            )            
+          })
+        }
+                            {/* <div className="wrap01">
                                 <ul>
                                     <li><a href="">
                                         <img src={path + "/img/21dcee5f3518b517dd549d33ca245755.jpeg"} />
@@ -26,7 +39,7 @@ function Team() {
                                         <img src={path + "/img/3f8d8f2ab645f6f8a2a0d4d37a423399.jpeg"} />
                                         <b>Ann</b><p>CEO</p></a></li>
                                 </ul>
-                            </div>
+                            </div> */}
                             <a href="#" className="btn_show">SHOW ALL</a>
                         </div>
                     </section>
