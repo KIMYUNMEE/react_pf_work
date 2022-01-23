@@ -5,9 +5,9 @@ const initMember = {
   
   members: [
   
-    {image:"process.env.PUBLIC_URL/img/21dcee5f3518b517dd549d33ca245755.jpeg", name:'David', position:'CEO'},
+    { name:'David', position:'CEO'},
     
-    {image:"process.env.PUBLIC_URL/img/21dcee5f3518b517dd549d33ca245755.jpeg", name:'Michael', position:'Developer'}
+    { name:'Michael', position:'Developer'}
   ]
 }
 const memberReducer=(state=initMember, action)=>{

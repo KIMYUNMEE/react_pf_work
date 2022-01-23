@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from "react/cjs/react.development";
+import { useEffect, useState } from "react";
 function News() {
           const basic = [        
     {title: 'Hello1', content: 'Here comes description in detail.' ,date:'2021-01-01'},  
