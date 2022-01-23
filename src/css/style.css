@@ -1865,6 +1865,10 @@ body {
       border: 1px solid #eee;
       padding: 20px;
       height: 400px; }
+      #news .inner .txtBox article img {
+        width: 100%;
+        height: 100%;
+        display: block; }
 
 figure {
   width: 100%;
