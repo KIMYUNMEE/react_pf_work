@@ -15,7 +15,7 @@ import { useEffect, useState, useRef } from 'react';
 function Main() {
     const main = useRef(null);
     const pos = useRef([]);
-    const [index, setIndex] = useState(null);
+    const [index, setIndex] = useState(0);
 
     const getIndex = index => {
         setIndex(index);
