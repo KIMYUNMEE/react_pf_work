@@ -3,7 +3,7 @@ import {NavLink} from "react-router-dom";
 
 
 function Header(){
-  const active = {color: "#000"};
+  const active = {color: "darkgreen"};
  
   return (  
     <header className="myScroll">
