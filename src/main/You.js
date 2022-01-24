@@ -11,10 +11,10 @@ function You(){
   console.log(vidData);
 
   //youtube api호출시 url옵션값
-  const api_key = "AIzaSyBkpD_-BgdZiSIofD5kISYGqb-D-9LjQKw";
-  const playListId = "PLydzO6M9X9y80H-ibsO6Gy9EMB_vJablJ";
-  const num = 5;
-  const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${api_key}&playlistId=${playListId}&maxResults=${num}`; 
+    const api_key = "AIzaSyB7VIAECTixPlj0sr-goHwkmNRFIwxZntA";
+  const playListId = "PLGOVj4gmzJyBMQSKPpBoycEvgXVFPMRZV";
+  const num = 10;
+  const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${api_key}&playlistId=${playListId}&maxResults=${num}`;
 
   //youtube데이터를 axio로 호출해서 dispatch를 통해 reducer에 전달하는 함수 정의
   const fetchYoutube = async ()=>{
@@ -36,10 +36,24 @@ function You(){
         <h2>Recent YOUTUBE</h2>
         <div className="vidBox">
           {
-            vidData.map((vid,index)=>{
-              return (
-                <img key={index} src={vid.snippet.thumbnails.medium.url} />
-              )
+            vidData.map((vid, index) => {
+               let tit = vid.snippet.title;
+              let tit_len = tit.length;
+              let desc = vid.snippet.description;
+              let desc_len = desc.length; 
+               if(index<4){
+                 return (
+                   <article>
+                     <a href=""><img key={index} src={vid.snippet.thumbnails.medium.url} /></a>
+                     
+                     <div className="txt">
+                      <h2>{(tit_len > 30) ? tit =  tit.substr(0,30)+"..." : tit}</h2>
+                      <p>{(desc_len > 150) ? desc =  desc.substr(0,150)+"..." : desc}</p>
+                    </div>
+                  </article>
+                  
+                )
+              }              
             })
           }
         </div>

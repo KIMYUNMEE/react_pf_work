@@ -11,11 +11,7 @@ function Department() {
   console.log(members);
   const dispatch = useDispatch();
 
-  const newMember = [
-   {image:"path/img/21dcee5f3518b517dd549d33ca245755.jpeg", name:'David', position:'CEO'},
-    
-    {image:"img/worker11.jpg", name:'Michael', position:'Developer123444'}
-  ]
+ 
   useEffect(()=>{
     axios
       .get(url)
@@ -104,9 +100,7 @@ Our work strives to enhance our sense of surroundings, identity and relationship
       </div>
       
             
-             <button onClick={()=>{
-          dispatch(setMembers(newMember))        
-        }}>맴버 변경</button>
+      
         
       </div>
       
