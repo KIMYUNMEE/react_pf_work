@@ -245,7 +245,6 @@ function Gallery(){
             }
           </Masonry>  
         </div>
-        
       </div>
       { isPop ? <Pop /> : null }
     </section>

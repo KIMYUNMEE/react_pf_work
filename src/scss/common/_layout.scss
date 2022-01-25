@@ -24,6 +24,7 @@ body {
       color: #000;
       letter-spacing: 2px;
       margin-bottom: 15px;
+      animation: slide 0.8s ease-in-out;
       a {
         font-size: 45px;
         color: #000;
@@ -77,6 +78,7 @@ body {
     .wrap01 {
       padding: 100px 0 0;
       h2 {
+        animation: text_animation 0.8s ease-in-out;
         font-size: 40px;
         color: #000;
         line-height: 45px;
@@ -160,23 +162,62 @@ body {
       float: left;
       width: calc(50% - 220px);
       margin: 0 0 0 220px;
+      div.hi {
+        &:nth-of-type(1) {
+          .h {
+            img {
+              opacity: 1 !important;
+            }
+          }
+        }
+        .h {
+          img {
+            opacity: 0;
+            position: absolute;
+            right: 175px;
+            top: 100px;
+          }
+        }
+        &:hover .h2 {
+          opacity: 1;
+        }
+      }
+
       p {
         margin-bottom: 45px;
         line-height: 17px;
         font-size: 13px;
         color: #141414;
       }
-      ul li a {
-        font-size: 24px;
-        color: #666;
-        line-height: 70px;
-        border-bottom: 2px solid #bbb;
-        &:hover {
-          border-bottom: 2px solid #000;
+      ul {
+        li {
+          cursor: pointer;
+          position: relative;
+          font-size: 24px;
+          color: #666;
+          line-height: 70px;
+          border-bottom: 2px solid #bbb;
+          &:hover {
+            border-bottom: 2px solid #000;
+          }
+          img {
+            opacity: 0;
+            position: absolute;
+            transform: translate(-500px, -500px);
+            object-fit: contain;
+            object-position: top;
+            transition: 0.2s;
+          }
+          &:hover {
+            img {
+              opacity: 1;
+            }
+          }
         }
       }
     }
     .wrap02 {
+      width: calc(50% - 88px);
       float: left;
       margin-left: 88px;
       img {
@@ -864,5 +905,33 @@ body {
         }
       }
     }
+  }
+}
+@keyframes text_animation_before {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes text_animation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide {
+  from {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }

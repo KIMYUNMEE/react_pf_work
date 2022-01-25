@@ -11,24 +11,24 @@ function Location(){
       title: "본점",  
       description:"감자",
       latlng : new kakao.maps.LatLng(37.48771318663092,126.75344867275281),
-      imgSrc : process.env.PUBLIC_URL+"/img/outline_fmd_good_black_48dp.png", 
-      imgSize : new kakao.maps.Size(80, 80),
+      imgSrc : process.env.PUBLIC_URL+"/img/location-pin.png",
+      imgSize : new kakao.maps.Size(70, 70),
       imgPos : {offset: new kakao.maps.Point(116, 99)}
     },  
     {
       title: "지점1", 
       description:"감자",
       latlng : new kakao.maps.LatLng(37.507099899564444,126.75639338893572),
-      imgSrc : process.env.PUBLIC_URL+"/img/outline_fmd_good_black_48dp.png", 
-      imgSize : new kakao.maps.Size(80, 80),
+      imgSrc : process.env.PUBLIC_URL+"/img/location-pin.png",
+      imgSize : new kakao.maps.Size(70, 70),
       imgPos : {offset: new kakao.maps.Point(116, 99)}
     },
     {
       title: "지점2", 
       description:"감자",
       latlng : new kakao.maps.LatLng(35.17422705914147,129.10766665201712),
-      imgSrc : process.env.PUBLIC_URL+"/img/outline_fmd_good_black_48dp.png", 
-      imgSize : new kakao.maps.Size(80, 80),
+      imgSrc : process.env.PUBLIC_URL+"/img/location-pin.png",
+      imgSize : new kakao.maps.Size(70, 70),
       imgPos : {offset: new kakao.maps.Point(116, 99)}
     }
   ];

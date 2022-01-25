@@ -1,0 +1,28 @@
+{
+  "data": [
+    {  
+      "image":"/img/8e0ea114c467c7bccc4af47e13ea6ebf_500w.jpg",
+      "alt":"process이미지",
+      "title": "Norwegian National Opera and Ballet.",
+      "date": "2000-2008"
+    },
+    {  
+       "image":"/img/f5941d7b5f21c4ce86b97178c325b18f_500w.jpg",
+      "alt":"process이미지",
+      "title": "Airside Hong Kong",
+      "date": "2017-2022"
+    },
+    {    
+        "image":"/img/cb7ecdbe7742076504c3b05024d19d91_500w.jpg",
+      "alt":"process이미지",
+      "title": "Shanghai Grand Opera House",
+      "date": "2017-2024"
+    },
+    {
+        "image":"/img/76246a2559c136b35d977e57eae04a35_500w.jpg",
+      "alt":"process이미지",
+      "title": "Pirelli 35 Refurbishment",
+      "date": "in process"
+    }
+  ]
+}
