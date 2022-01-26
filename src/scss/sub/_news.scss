@@ -1,5 +1,6 @@
 #news {
   width: 100%;
+  height: 100vh;
   position: relative;
 
   .inner {
@@ -45,6 +46,13 @@
         width: 100%;
         height: 100%;
         display: block;
+      }
+    }
+  }
+  &.on {
+    .inner {
+      h2 {
+        animation: text_animation 0.8s ease-in-out;
       }
     }
   }

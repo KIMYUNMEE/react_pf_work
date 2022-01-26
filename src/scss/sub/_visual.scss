@@ -2,3 +2,42 @@ figure {
   width: 100%;
   height: calc(100vh - 80px);
 }
+#popup {
+  width: 400px;
+  background: darkslategrey;
+  padding: 40px;
+  box-sizing: border-box;
+  color: #fff;
+
+  top: 50%;
+  position: fixed;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+
+  .content {
+    width: 100%;
+    min-height: 120px;
+    padding: 35px 0;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .wrap {
+    float: left;
+
+    label {
+      font: bold 12px/1 "맑은 고딕";
+      color: #fff;
+      margin-left: 4px;
+    }
+  }
+  .close {
+    float: right;
+    font: 14px/1 "arial";
+    color: #fff;
+  }
+}

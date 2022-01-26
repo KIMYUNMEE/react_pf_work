@@ -1,25 +1,27 @@
 {
     "data":[
         {
+            "id":0,
             "title": "Architecture",
          
             "img":"/img/e1f202f866fb9af65509c9302c64ad8e_500w.jpg"
         },
         {
+            "id":1,
             "title": "Landscape",
            
            "img":"/img/d5f7b5c4eb840250d8e097a48795530e_500w.jpg"
         },
-        {
+        {"id":2,
             "title": "Interior",
             "img":"/img/770984538d65039ef790cb0a909eb7f1_500w.jpg"
         },
-        {
+        {"id":3,
             "title": "Product design",
            
            "img":"/img/770984538d65039ef790cb0a909eb7f1_500w.jpg"
         },
-        {
+        {"id":4,
             "title": "Graphic design",
            
            "img":"/img/770984538d65039ef790cb0a909eb7f1_500w.jpg"

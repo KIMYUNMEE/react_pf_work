@@ -171,14 +171,6 @@ function Community() {
             })
           }
         </section>
-
-          
-
-
-
-
-        
-         
         </div>
       </div>
     </section>

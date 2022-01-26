@@ -26,10 +26,12 @@ function Info() {
                                 
                                 return (
                                     <>
-                                        <div className="hi">
+                                        <div className="hi" >
                                     <li key={index}>
                                         {award.title}
                                     </li>
+
+                                    
                                       <div className="h">
                                             <img src={`${path}` + award.img} className="h2"/>
                                             </div>

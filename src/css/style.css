@@ -291,7 +291,6 @@ body {
     .contents_about .inner .wrap01 {
       padding: 100px 0 0; }
       .contents_about .inner .wrap01 h2 {
-        animation: text_animation 0.8s ease-in-out;
         font-size: 40px;
         color: #000;
         line-height: 45px;
@@ -337,6 +336,11 @@ body {
         display: block;
         text-decoration-line: underline;
         margin-top: 20px; }
+  .contents_about.on .inner .wrap01 h2 {
+    animation: text_animation 0.8s ease-in-out; }
+  .contents_about.on .inner .wrap01 .wrap02 article .pic p,
+  .contents_about.on .inner .wrap01 .wrap02 article .pic span {
+    animation: slide 0.8s ease-in-out; }
 
 .contents_about02 {
   width: 100%; }
@@ -416,9 +420,18 @@ body {
       .contents_about02 .inner .wrap03 i {
         font-size: 11px;
         color: #666; }
+    .contents_about02 .inner::after {
+      content: "";
+      display: block;
+      clear: both; }
+  .contents_about02.on .inner h2 {
+    animation: text_animation 0.8s ease-in-out; }
+  .contents_about02.on .inner .wrap01 ul li {
+    animation: slide 0.8s ease-in-out; }
 
 .contents_about03 {
-  width: 100%; }
+  width: 100%;
+  height: 100vh; }
   .contents_about03 .inner {
     width: 1180px;
     margin: 120px auto; }
@@ -467,6 +480,11 @@ body {
       width: 100%;
       height: 100%;
       object-fit: cover; }
+  .contents_about03.on .inner h2 {
+    animation: text_animation 0.8s ease-in-out; }
+  .contents_about03.on .inner .wrap01 p {
+    animation: slide 0.8s ease-in-out;
+    animation-delay: 0.5s; }
 
 .contents_about04 {
   width: 100%; }
@@ -486,7 +504,22 @@ body {
       padding-bottom: 45px;
       float: left;
       width: 27%;
-      padding-left: 14px; }
+      padding-left: 14px;
+      opacity: 0;
+      transform: rotateY(200deg) translateY(100px);
+      transition: 0.5s; }
+      .contents_about04 .inner .wrap01:nth-of-type(1) {
+        transition-delay: 0s; }
+      .contents_about04 .inner .wrap01:nth-of-type(2) {
+        transition-delay: 0.2s; }
+      .contents_about04 .inner .wrap01:nth-of-type(3) {
+        transition-delay: 0.4s; }
+      .contents_about04 .inner .wrap01:nth-of-type(4) {
+        transition-delay: 0.6s; }
+      .contents_about04 .inner .wrap01:nth-of-type(5) {
+        transition-delay: 0.6s; }
+      .contents_about04 .inner .wrap01:nth-of-type(6) {
+        transition-delay: 0.6s; }
       .contents_about04 .inner .wrap01:first-of-type {
         margin-left: 220px; }
       .contents_about04 .inner .wrap01:nth-of-type(4n) {
@@ -513,6 +546,11 @@ body {
       content: "";
       clear: both;
       display: block; }
+  .contents_about04.on .inner h2 {
+    animation: text_animation 0.8s ease-in-out; }
+  .contents_about04.on .inner .wrap01 {
+    opacity: 1;
+    transform: rotateY(0deg) translateY(0px); }
 
 .btn_show {
   font-size: 11px;
@@ -1910,6 +1948,7 @@ body {
 
 #info {
   width: 100%;
+  height: 100vh;
   position: relative; }
 
 #intro {
@@ -1928,7 +1967,7 @@ body {
       color: #000;
       line-height: 45px;
       padding-bottom: 20px;
-      margin-bottom: 80px;
+      margin-bottom: 50px;
       font-weight: normal;
       border-bottom: 1px solid #000; }
     #you .inner .vidBox::after {
@@ -1964,6 +2003,8 @@ body {
           line-height: 1.5;
           overflow: hidden;
           font-size: 15px; }
+  #you.on .inner h2 {
+    animation: text_animation 0.8s ease-in-out; }
 
 @media screen and (max-width: 1179px) {
   #you .inner {
@@ -1991,6 +2032,7 @@ body {
         height: 230px; } }
 #news {
   width: 100%;
+  height: 100vh;
   position: relative; }
   #news .inner {
     width: 1180px;
@@ -2028,6 +2070,8 @@ body {
         width: 100%;
         height: 100%;
         display: block; }
+  #news.on .inner h2 {
+    animation: text_animation 0.8s ease-in-out; }
 
 @media screen and (max-width: 1179px) {
   #news .inner {
@@ -2054,5 +2098,35 @@ body {
 figure {
   width: 100%;
   height: calc(100vh - 80px); }
+
+#popup {
+  width: 400px;
+  background: darkslategrey;
+  padding: 40px;
+  box-sizing: border-box;
+  color: #fff;
+  top: 50%;
+  position: fixed;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%); }
+  #popup .content {
+    width: 100%;
+    min-height: 120px;
+    padding: 35px 0; }
+  #popup::after {
+    content: "";
+    display: block;
+    clear: both; }
+  #popup .wrap {
+    float: left; }
+    #popup .wrap label {
+      font: bold 12px/1 "맑은 고딕";
+      color: #fff;
+      margin-left: 4px; }
+  #popup .close {
+    float: right;
+    font: 14px/1 "arial";
+    color: #fff; }
 
 /*# sourceMappingURL=style.css.map */

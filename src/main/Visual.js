@@ -1,6 +1,8 @@
-function Visual(){
+
+function Visual() {
    const path= process.env.PUBLIC_URL;
-  return (
+    return (
+    
            <figure className="visual">
                         <div className="inner">
                             <p>We are Snohetta. We create<br /><a href="">architecture,</a><a href="">landscapes,</a><br /><a href="">interiors,</a><a href="">product design</a><br />and <a href="">graphic design.</a></p>
@@ -9,7 +11,8 @@ function Visual(){
                                     <a href="">Read more about us</a>
                                 </div></div>
                         </div>
-                    </figure>
+      </figure>
+  
 
   )
 }
