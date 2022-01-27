@@ -7,12 +7,33 @@
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7dead6b680f4f8fc0b3aef8618b8aeea"></script>
   <title>React Porfolio basic</title>
+  <style>
+    .mask {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      background: #111;
+      top: 0px;
+      left: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 100px;
+      z-index: 10;
+      transition: opacity 1s;
+    }
+  
+    .mask.off {
+      opacity: 0;
+    }
+  </style>
 </head>
 
-<body>
+<body class='first'>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-
   <div id="root"></div>
+  <div class="mask">Loading</div>
 </body>
 
 </html>
