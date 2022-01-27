@@ -9,7 +9,7 @@ function Header(){
     <header className="myScroll">
       <div className="inner">
         <h1>
-        <NavLink activeStyle={active} exact to="/">Snohetta</NavLink>
+        <NavLink activeStyle={active} exact to="/">React Portfolio</NavLink>
         </h1>
 
         <ul id="gnb">

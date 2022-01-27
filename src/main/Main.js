@@ -7,6 +7,7 @@ import Btns from './Btns.js';
 import Process from './Process.js';
 import Team from './Team.js';
 import Banner from './Banner.js';
+import Yum from './Yum.js';
 import You from './You.js';
 import Popup from './Popup.js';
 import Anime from '../class/anime.js';
@@ -90,6 +91,7 @@ function Main() {
             <News />
                <You />
             <Banner />
+            <Yum />
 
             <Btns getIndex={getIndex} />
               {isPop ? <Popup getIsPop={getIsPop} /> : ""}

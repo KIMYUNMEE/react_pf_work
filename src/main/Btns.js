@@ -9,6 +9,7 @@ function Btns(props){
       <li onClick={()=>props.getIndex(4)}></li>
       <li onClick={()=>props.getIndex(5)}></li>
       <li onClick={()=>props.getIndex(6)}></li>
+      <li onClick={()=>props.getIndex(7)}></li>
     </ul>
   )
 }

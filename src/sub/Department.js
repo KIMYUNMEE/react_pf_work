@@ -25,7 +25,8 @@ function Department() {
     
     <section className="content department">
       <div className="inner">
-        <strong>Snohetta is a place that nobody<br />is from, but anyone can go to.</strong>
+        <strong>Department</strong>
+        {/* <strong>Snohetta is a place that nobody<br />is from, but anyone can go to.</strong> */}
         <div>
           <div className="img_wrap">
           <img src={path + "/img/8bded8c72d8e6472af7313be0043ae12_1024w.jpeg"} /> </div>
