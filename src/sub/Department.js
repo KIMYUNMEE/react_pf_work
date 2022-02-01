@@ -2,6 +2,15 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setMembers } from '../redux/actions';
+ import { Navigation, Pagination,Autoplay } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import SwiperCore  from "swiper/core";
+SwiperCore.use(Autoplay);
+
 
 function Department() {
    let [posts, setPosts] = useState([]);
@@ -29,17 +38,41 @@ function Department() {
         {/* <strong>Snohetta is a place that nobody<br />is from, but anyone can go to.</strong> */}
         <div>
           <div className="img_wrap">
-          <img src={path + "/img/8bded8c72d8e6472af7313be0043ae12_1024w.jpeg"} /> </div>
+          <img src={path + "/img/d786195f2bf190b64a83591785b586b8_2048w.jpg"} /> </div>
           <p>Snøhetta (Norwegian pronunciation: [ˈsnøːˌhɛtɑ]) began as a collaborative architectural and landscape workshop, and has remained true to its trans-disciplinary way of thinking since its inception.
 Our work strives to enhance our sense of surroundings, identity and relationship to others and the physical spaces we inhabit, whether feral or human-made. Museums, products, reindeer observatories, graphics, landscapes and dollhouses get the same care and attention to purpose.</p>
           <a href="" className="btn_process">EXPLORE OUR PROCESS,PHILOSOPHY,AND VALUES</a>
           <h2>Projects</h2>
           <span>They are samples in a series of contextual examinations rather than isolated masterpieces. They are associative rather than symbolic. They are comments rather than statements. Every story told is a shared experience of contemporary conditions set within a given frame.</span>
           <ul>
-            <li><a href=""><img src={path + "/img/d5f7b5c4eb840250d8e097a48795530e_500w.jpg"} /><p>Knubben</p></a></li>
-            <li><a href=""><img src={path + "/img/d5f7b5c4eb840250d8e097a48795530e_500w.jpg"} /><p>Knubben</p></a></li>
-            <li><a href=""><img src={path + "/img/d5f7b5c4eb840250d8e097a48795530e_500w.jpg"} /><p>Knubben</p></a></li>
-          </ul>
+      <Swiper   
+        modules={[Navigation, Pagination]}
+        spaceBetween={0}
+        slidesPerView={3}
+               autoplay={{ delay: 3000 }}
+        navigation
+        pagination={{ clickable: true }}
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log('slide change')}
+      >
+        <SwiperSlide> <li><a href=""><img src={path + "/img/c77043be0662dee11ea4f6803bf6b4ad_500w.jpg"} /><p>Joslyn Art Museum Expansion</p></a></li></SwiperSlide>
+        <SwiperSlide><li><a href=""><img src={path + "/img/45b3b19863cec842fe4f4868953be4fc_500w.jpg"} /><p>Ex Macello - Aria </p></a></li></SwiperSlide>
+        <SwiperSlide><li><a href=""><img src={path + "/img/d5f7b5c4eb840250d8e097a48795530e_500w.jpg"} /><p>Knubben</p></a></li></SwiperSlide>
+        <SwiperSlide><li><a href=""><img src={path + "/img/3a43ce12ea53f64528be81af7bf3be7d_500w.jpg"} /><p>Swarovski Beletage</p></a></li></SwiperSlide>     
+        <SwiperSlide><li><a href=""><img src={path + "/img/0e8cc335448fee4a99a905e532581caf_500w.jpeg"} /><p>King Abdulaziz Centre for World Culture (Ithra)</p></a></li></SwiperSlide>     
+        <SwiperSlide><li><a href=""><img src={path + "/img/31e75d752c0005f363e15d5691c8280b_500w.jpg"} /><p>Marmomacc</p></a></li></SwiperSlide>     
+      </Swiper>
+    </ul>
+  
+           
+            
+            
+            
+           
+            
+            
+
+         
           <a href="" className="btn_more">SHOW MORE</a>
           <b>Selected Awards</b>
             <table summary="게시글 번호, 게시글 제목, 작성자, 작성일을 포함한 자유게시판">

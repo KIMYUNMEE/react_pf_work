@@ -3,8 +3,6 @@ import { useEffect, useState } from "react";
 function Info() {
      const [service, setService] = useState([]);
     const path = process.env.PUBLIC_URL;
-
-
     const url = `${path}/db/service.json`;
 
   useEffect(()=>{
@@ -22,16 +20,14 @@ function Info() {
                   <div className="wrap01">
                       <ul>
                       {
-                            service.map((award,index)=>{
+                            service.map((award)=>{
                                 
                                 return (
                                     <>
-                                        <div className="hi" >
-                                    <li key={index}>
+                                    <div className="hi" key={award.id}>
+                                    <li >
                                         {award.title}
                                     </li>
-
-                                    
                                       <div className="h">
                                             <img src={`${path}` + award.img} className="h2"/>
                                             </div>
@@ -42,13 +38,6 @@ function Info() {
                           }
                           </ul>
                             </div>
-<ul>
-                   
-
-
-</ul>
-
-
                             <div className="wrap03">
                                 <span>About us</span>
                                 <p>Snohetta is a place that<br />nobody is from, but<br />anyone can go to.</p>

@@ -36,7 +36,7 @@ function You(){
         <h2>Recent YOUTUBE</h2>
         <div className="vidBox">
           {
-            vidData.map((vid, index) => {
+            vidData.map((vid,index) => {
                let tit = vid.snippet.title;
               let tit_len = tit.length;
               let desc = vid.snippet.description;
@@ -44,7 +44,9 @@ function You(){
                if(index<4){
                  return (
                    <article>
-                     <a href=""><img key={index} src={vid.snippet.thumbnails.medium.url} /></a>
+                     <a href="">
+                       <img key={index} src={vid.snippet.thumbnails.medium.url} />
+                     </a>
                      
                      <div className="txt">
                       <h2>{(tit_len > 30) ? tit =  tit.substr(0,30)+"..." : tit}</h2>

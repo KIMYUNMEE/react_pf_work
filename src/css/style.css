@@ -1131,7 +1131,7 @@ body {
       color: #666;
       display: block;
       text-decoration-line: underline;
-      margin-top: 45px; }
+      margin-top: 85px; }
   .community .inner .news::after {
     content: "";
     clear: both;
@@ -1229,6 +1229,14 @@ body {
   align-content: center; }
   .community .inner .showBox article .post {
     width: 70%; }
+    .community .inner .showBox article .post input[type="text"] {
+      background-color: transparent;
+      border: 1px solid #888;
+      color: #fff;
+      font: 300 14px/1 Spline Sans;
+      margin-bottom: 10px;
+      padding: 10px;
+      width: 300px; }
   .community .inner .showBox article .btns {
     display: inline-flex;
     justify-content: center;
@@ -1274,7 +1282,10 @@ body {
       float: none;
       width: 100%;
       padding-left: 0;
-      margin-top: 20px; } }
+      margin-top: 20px; }
+  .community .inner .inputBox input,
+  .community .inner .inputBox textarea {
+    width: 100%; } }
 .department .inner strong {
   font-size: 80px;
   line-height: 90px;
@@ -1310,31 +1321,28 @@ body {
     font-weight: normal;
     padding-bottom: 20px;
     border-bottom: 1px solid #000; }
-  .department .inner > div span {
+  .department .inner > div > span {
     padding-top: 20px;
     width: 37vw;
     display: block;
     font-size: 12px;
     line-height: 15px; }
-  .department .inner > div ul {
+  .department .inner > div > ul {
     margin-top: 20px;
     border-bottom: 1px solid #000; }
-    .department .inner > div ul li {
-      float: left;
-      width: 33.3%; }
-      .department .inner > div ul li a {
-        padding-right: 18px;
-        display: block; }
-        .department .inner > div ul li a img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover; }
-        .department .inner > div ul li a p {
-          padding-top: 16px;
-          padding-bottom: 40px;
-          font-size: 13px;
-          color: #666; }
-    .department .inner > div ul::after {
+    .department .inner > div > ul li a {
+      padding-right: 18px;
+      display: block; }
+      .department .inner > div > ul li a img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover; }
+      .department .inner > div > ul li a p {
+        padding-top: 16px;
+        padding-bottom: 40px;
+        font-size: 13px;
+        color: #666; }
+    .department .inner > div > ul::after {
       content: "";
       clear: both;
       display: block; }
@@ -2032,6 +2040,19 @@ body {
       margin-bottom: 20px; }
       #you .inner .vidBox article .txt {
         height: 230px; } }
+.swiper {
+  overflow-y: hidden; }
+  .swiper .swiper-slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10vw;
+    color: #fff; }
+  .swiper .swiper-pagination {
+    position: inherit;
+    bottom: 9px; }
+
 #news {
   width: 100%;
   height: 100vh;

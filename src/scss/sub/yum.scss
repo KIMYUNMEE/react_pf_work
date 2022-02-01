@@ -1,19 +1,16 @@
-figure {
-  width: 100%;
-  height: calc(100vh - 100px);
-  background: #111;
+.swiper {
+  overflow-y: hidden;
 
-  .swiper {
-    height: 100%;
-
-    .swiper-slide {
-      background: aqua;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 10vw;
-      color: #fff;
-    }
+  .swiper-slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10vw;
+    color: #fff;
+  }
+  .swiper-pagination {
+    position: inherit;
+    bottom: 9px;
   }
 }
