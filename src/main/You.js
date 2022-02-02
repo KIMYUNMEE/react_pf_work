@@ -37,25 +37,22 @@ function You(){
         <div className="vidBox">
           {
             vidData.map((vid,index) => {
-               let tit = vid.snippet.title;
+               let tit = vid.snippet.title; 
               let tit_len = tit.length;
               let desc = vid.snippet.description;
               let desc_len = desc.length; 
-               if(index<4){
-                 return (
-                   <article>
-                     <a href="">
-                       <img key={index} src={vid.snippet.thumbnails.medium.url} />
-                     </a>
-                     
-                     <div className="txt">
+                  if(index<4){
+                    return (
+                  <article key={index}>
+                  <img alt={vid.alt} src={vid.snippet.thumbnails.medium.url} />
+                  <div className="txt">
                       <h2>{(tit_len > 30) ? tit =  tit.substr(0,30)+"..." : tit}</h2>
                       <p>{(desc_len > 150) ? desc =  desc.substr(0,150)+"..." : desc}</p>
-                    </div>
-                  </article>
-                  
+                        </div>
+                        </article>
                 )
-              }              
+              }    
+    
             })
           }
         </div>

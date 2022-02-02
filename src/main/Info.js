@@ -14,25 +14,24 @@ function Info() {
       })
   },[])
       return(
- <section id="info" className="contents_about02 myScroll">
+    <section id="info" className="contents_about02 myScroll">
                         <div className="inner">
                             <h2>Services</h2>
                   <div className="wrap01">
                       <ul>
                       {
-                            service.map((award)=>{
+                            service.map((award,index)=>{
                                 
                                 return (
-                                    <>
-                                    <div className="hi" key={award.id}>
+                                    <div className="hi" key={index}>
                                     <li >
                                         {award.title}
                                     </li>
                                       <div className="h">
-                                            <img src={`${path}` + award.img} className="h2"/>
+                                        <img src={`${path}` + award.img} className="h2" alt={ award.alt}/>
                                             </div>
                                             </div>
-                                        </>
+                                        
                                 )
                             })
                           }
