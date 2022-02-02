@@ -85,7 +85,7 @@ function Join() {
       <div className="inner">
 
         <h2>Join<br/>us</h2>
-          <p>Welcome! Snohetta</p>
+          <p>Welcome! Refolio</p>
         <span>Let's scale your brand, together</span>
         <div className="join_box">회원정보입력      >      약관동의      >      회원가입</div>
         {success ? <div>회원가입을 축하합니다.</div> : null}

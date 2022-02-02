@@ -77,7 +77,7 @@ function Location(){
     <section className='content location'>
       <div className="inner">
         <h2>Location</h2>
-        <p>Snohetta에 오시는 길을 알려드립니다.</p>
+        <p>Refolio에 오시는 길을 알려드립니다.</p>
         <span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, error.<br />
 Maiores delectus cum beatae animi nemo illo veniam excepturi labore et est.</span>
       

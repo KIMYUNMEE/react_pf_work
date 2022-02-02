@@ -39,7 +39,7 @@ function Info() {
                             </div>
                             <div className="wrap03">
                                 <span>About us</span>
-                                <p>Snohetta is a place that<br />nobody is from, but<br />anyone can go to.</p>
+                                <p>Refolio is a place that<br />nobody is from, but<br />anyone can go to.</p>
                                 <a href="">DISCOVER</a>
                                 {/* <i class="fas fa-long-arrow-alt-right"></i> */}
                             </div>
