@@ -11,7 +11,7 @@ function Popup(props){
   return(
     <aside id="popup" ref={popup}>
       <div className="content">
-        <h2>Welcome my React PortPolio</h2><br/><br/>
+        <h2>Welcome My React PortPolio!</h2><br/><br/>
               <p>안녕하세요 저의 리엑트 포트폴리오입니다.<br/>
                   이 포트폴리오는 크롬 브라우저에서 호환되고 제작되었습니다.<br/>
                   방문해주셔서 감사합니다.
