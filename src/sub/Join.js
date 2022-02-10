@@ -8,7 +8,6 @@ function Join() {
     comments: '',
     gender: '',
     interests: '',
-    edu: ''
   }
   const [val, setVal] = useState(initVal);
   const [err, setErr] = useState({});
