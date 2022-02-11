@@ -47,13 +47,13 @@ function Join() {
     if( !val.pwd1 || val.pwd1.length<5 || !eng.test(val.pwd1) || !num.test(val.pwd1) || !spc.test(val.pwd1)){
       errs.pwd1='비밀번호는 5글자 이상, 문자,숫자,특수문자를 모두 포함해서 입력하세요';
     }
-    if( !val.email || val.email.length <8 || !/@/.test(val.email) ){
+    if( !val.email || val.email.length < 8 || !/@/.test(val.email) ){
       errs.email='이메일주소를 8글자 이상 입력하세요';
     }
     if( !val.pwd2 || val.pwd1 !== val.pwd2 ){
       errs.pwd2='두개의 비밀번호를 동일하게 입력하세요';
     }
-    if( !val.comments || val.comments.length <10 ){
+    if( !val.comments || val.comments.length < 10 ){
       errs.comments='남기는말을 10글자 이상 입력하세요';
     }
     if( !val.gender ){
