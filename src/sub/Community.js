@@ -103,7 +103,7 @@ function Community() {
             <span>Sep 17, 2021</span>
             <p>The Ocean Space Centre’s regulation plan is now approved<br/>by Trøndelag County Council.<br/><br/><br/>
               The construction of the center is scheduled to start summer<br /> 2022. Our oceans are important sources of food, minerals<br />and energy – all necessary to our continued existence. The Ocean<br />Space Centre is set to be one of the world’s most advanced facilities for ocean research and<br />education, and will be used by Norwegian University of Science and Technology (NTNU)<br />and SINTEF. The center aims to contribute to the development and restructuring of the maritime<br />industry locally, nationally and globally.</p>
-            <a href="" className="btn_load">Load more news</a>
+            <a href="#" className="btn_load">Load more news</a>
           </div>
         </div>
         <div className="faq">
@@ -121,13 +121,13 @@ function Community() {
             type="text" 
             placeholder='제목을 입력하세요' 
             ref={input} 
-          /><br />
+          /><br/>
           <textarea 
             cols="30" rows="5" 
             placeholder='질문하고자 하는 내용을 입력하세요' 
             ref= {textarea}
           >
-          </textarea><br />
+          </textarea><br/>
           <button onClick={()=>{
             input.current.value='';
             textarea.current.value='';

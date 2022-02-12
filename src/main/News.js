@@ -34,7 +34,6 @@ function News() {
         <h2>RECENT NEWS</h2>
         
         <div className="txtBox">
-
           {
             posts.map((post, index) => {
               if (index < 6) {

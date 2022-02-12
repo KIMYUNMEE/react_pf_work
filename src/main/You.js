@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setYoutube } from '../redux/actions';
 
-
 function You(){
   const youtube = useSelector(state=>state);
   const dispatch = useDispatch();
