@@ -37,7 +37,6 @@ function News() {
           {
             posts.map((post, index) => {
               if (index < 6) {
-          
               return (
                 <article key={index}>
                   <h3>{post.title}</h3>

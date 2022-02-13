@@ -23,16 +23,12 @@ function Footer(){
             <div className="snsIcon">
             <ul>
                           <li><a href="" className="sns">
-                              {/* <i class="fab fa-instagram"></i> */}
                               <span className="hide">instagram</span></a></li>
                           <li><a href="" className="sns">
-                              {/* <i class="fab fa-facebook-f"></i> */}
                               <span className="hide">facebook</span></a></li>
                           <li><a href="" className="sns">
-                              {/* <i class="fab fa-twitter"></i> */}
                               <span className="hide">twitter</span></a></li>
                 <li><a href="" className="sns">
-                              {/* <i class="fab fa-youtube"></i> */}
                               <span className="hide">youtube</span></a></li>
             </ul>
             
@@ -41,19 +37,6 @@ function Footer(){
         <p className="text">Copyright &copy; 2021 DCODELAB All Right reserved.</p>
         </div>
     </footer>
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
   )
 }
 

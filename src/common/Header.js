@@ -1,6 +1,4 @@
-import {NavLink} from "react-router-dom";
-
-
+import { NavLink } from "react-router-dom";
 
 function Header(){
   const active = {color: "darkgreen"};
@@ -20,8 +18,6 @@ function Header(){
           <li><NavLink activeStyle={active}  to="/location">LOCATION</NavLink></li>
           <li><NavLink activeStyle={active}  to="/join">JOIN</NavLink></li>
         </ul>
-
-   
         <a href="#" className="btnCall" onClick={(e) => {
           e.preventDefault();
            const btnCall = document.querySelector(".btnCall"); 
