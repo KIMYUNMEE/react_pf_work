@@ -50,8 +50,7 @@ function You(){
                         </div>
                         </article>
                 )
-              }    
-    
+              }   
             })
           }
         </div>

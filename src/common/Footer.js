@@ -28,7 +28,7 @@ function Footer(){
                               <span className="hide">facebook</span></a></li>
                           <li><a href="" className="sns">
                               <span className="hide">twitter</span></a></li>
-                <li><a href="" className="sns">
+                        <li><a href="" className="sns">
                               <span className="hide">youtube</span></a></li>
             </ul>
             

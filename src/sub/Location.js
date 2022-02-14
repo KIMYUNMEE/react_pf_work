@@ -122,21 +122,11 @@ Maiores delectus cum beatae animi nemo illo veniam excepturi labore et est.</spa
           <div><span>Fill out the form and we will<br />contact you shortly to discuss<br />the details of the project</span></div>
           <div>
             <ul>
-              <li>
-                   <input type="text" name='userid' placeholder='Full name'/>
-              </li>
-              <li>
-                   <input type="text" name='email' placeholder='Email'/>
-              </li>
-              <li>
-                   <input type="number" name='tel' placeholder='Tel'/>
-              </li>
-              <li>
-                   <input type="text" name='company' placeholder='Company' />
-              </li>
-              <li>
-                   <a href="#" className="btn_send">SEND</a>
-              </li>
+              <li><input type="text" name='userid' placeholder='Full name'/></li>
+              <li><input type="text" name='email' placeholder='Email'/></li>
+              <li><input type="number" name='tel' placeholder='Tel'/></li>
+              <li><input type="text" name='company' placeholder='Company' /></li>
+              <li><a href="#" className="btn_send">SEND</a></li>
             </ul>
           </div>
 
