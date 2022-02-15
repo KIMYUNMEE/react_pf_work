@@ -27,9 +27,6 @@ function Team() {
                 <a href="#" className="btn_show">SHOW ALL</a>
                         </div>
                     </section>
-  
-
-      
   )
 }
 

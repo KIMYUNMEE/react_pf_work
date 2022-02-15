@@ -14,7 +14,6 @@ function Process() {
                             </div>
                             <strong>Start a project?</strong>
                             <a href="" className="contact">CONTACT US</a>
-                            {/* <i class="fas fa-long-arrow-alt-right"></i> */}
                         </div>
                     </section>
 

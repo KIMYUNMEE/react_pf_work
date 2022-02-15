@@ -11,8 +11,6 @@ function Visual() {
                                 </div></div>
                         </div>
       </figure>
-  
-
   )
 }
 
