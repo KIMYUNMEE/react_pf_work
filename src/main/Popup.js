@@ -14,9 +14,7 @@ function Popup(props){
         <h2>Welcome My React PortPolio!</h2><br/><br/>
               <p>안녕하세요 저의 리엑트 포트폴리오입니다.<br/>
                   이 포트폴리오는 크롬 브라우저에서 호환되고 제작되었습니다.<br/>
-                  방문해주셔서 감사합니다.
-        </p>
-     
+                  방문해주셔서 감사합니다.</p>  
       </div>
       <div className="wrap">
         <input type="checkbox" name="ck" id="ck" onChange={handleCheck} />

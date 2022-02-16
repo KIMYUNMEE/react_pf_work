@@ -17,7 +17,7 @@ function Main() {
     const main = useRef(null);
     const pos = useRef([]);
     const [index, setIndex] = useState(0);
- let [isPop, setIsPop] = useState(false);
+    let [isPop, setIsPop] = useState(false);
 
   const getIsPop = val => {
     setIsPop(val);
@@ -94,9 +94,6 @@ function Main() {
             
         </div>
     )
-
-
-
 }
 
 export default Main;

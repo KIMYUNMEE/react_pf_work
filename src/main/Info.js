@@ -41,7 +41,6 @@ function Info() {
                                 <span>About us</span>
                                 <p>Refolio is a place that<br />nobody is from, but<br />anyone can go to.</p>
                                 <a href="">DISCOVER</a>
-                                {/* <i class="fas fa-long-arrow-alt-right"></i> */}
                             </div>
                         </div>
                     </section>

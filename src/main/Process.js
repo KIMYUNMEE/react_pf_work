@@ -6,7 +6,7 @@ function Process() {
                             <h2>Process</h2>
                             <div className="wrap01">
                                 <p>Our working method practices a simultaneous exploration of<br />traditional handicraft and cutting edge difital technology
-                                    - a<br />complementary relationship that drives our creative process.</p>
+                                    - a<br/>complementary relationship that drives our creative process.</p>
                                 <a href="">LEARN MORE</a>
                             </div>
                             <div className="wrap02">

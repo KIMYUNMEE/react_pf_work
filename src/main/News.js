@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 function News() {
         const basic = [        
-    {title: 'Hello1', content: 'Here comes description in detail.' ,date:'2021-01-01'},  
+    {title: 'Hello1', content: 'Here comes description in detail.',date:'2021-01-01'},  
     {title: 'Hello2', content: 'Here comes description in detail.',date:'2021-02-01'},  
     {title: 'Hello3', content: 'Here comes description in detail.',date:'2021-03-01'},  
     {title: 'Hello4', content: 'Here comes description in detail.',date:'2021-04-01'},  
