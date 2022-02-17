@@ -16,8 +16,8 @@ function Community() {
     }else{
       return [{title: 'Hello0', content: 'Here comes description in detail.'},
     {title: 'Hello1', content: 'Here comes description in detail.'},  
-     {title: 'Hello2', content: 'Here comes description in detail.'},  
-     {title: 'Hello3', content: 'Here comes description in detail.'}  ];
+    {title: 'Hello2', content: 'Here comes description in detail.'},  
+    {title: 'Hello3', content: 'Here comes description in detail.'}  ];
     }
   }
   const [posts, setPosts]= useState(getLocalItems);
@@ -84,7 +84,7 @@ function Community() {
   const path= process.env.PUBLIC_URL;
   
 
-   useEffect(()=>{
+  useEffect(()=>{
     localStorage.setItem('posts', JSON.stringify(posts));
     frame.current.classList.add('on');
   },[posts]);
@@ -93,7 +93,7 @@ function Community() {
     <section ref={frame} className="content community">
       <div className="inner">
         <h2>Community</h2>
-           <div className="news">
+          <div className="news">
           <div className="news_img">
             <img src={path + "/img/854ef8b1ce36f53d95eb686c5906cfaa_500w.jpg"} />
           </div>

@@ -18,7 +18,7 @@ function Youtube(){
       <div className="inner">
         <h2>Youtube</h2>
         <p className="youtube_txt">Our working method practices a simultaneous exploration of traditional handcraft and cutting edge digital technology - a<br />complementary relationship that drives our creative process.</p>
-         <span>They are samples in a series of contextual examinations rather than isolated masterpieces. They are associative rather than symbolic. They are comments rather than statements. Every story told is a shared experience of contemporary conditions set within a given frame.</span>
+        <span>They are samples in a series of contextual examinations rather than isolated masterpieces. They are associative rather than symbolic. They are comments rather than statements. Every story told is a shared experience of contemporary conditions set within a given frame.</span>
         <section className="frame">
           {            
             vidData.map((item, index)=>{

@@ -36,7 +36,7 @@ function You(){
         <div className="vidBox">
           {
             vidData.map((vid,index) => {
-               let tit = vid.snippet.title; 
+              let tit = vid.snippet.title; 
               let tit_len = tit.length;
               let desc = vid.snippet.description;
               let desc_len = desc.length; 

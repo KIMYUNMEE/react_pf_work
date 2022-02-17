@@ -1,8 +1,8 @@
 function Visual() {
-   const path= process.env.PUBLIC_URL;
+const path= process.env.PUBLIC_URL;
     return (
     
-           <figure className="visual">
+        <figure className="visual">
                         <div className="inner">
                             <p>We are Refolio. We create<br /><a href="">architecture,</a><a href="">landscapes,</a><br /><a href="">interiors,</a><a href="">product design</a><br />and <a href="">graphic design.</a></p>
                             <div className="visual_img"><img src={path + "/img/f470e4cc3df2e718b224293c71383079_1024w.jpeg"} />
@@ -10,8 +10,8 @@ function Visual() {
                                     <a href="">Read more about us</a>
                                 </div></div>
                         </div>
-      </figure>
-  )
+    </figure>
+)
 }
 
 export default Visual;

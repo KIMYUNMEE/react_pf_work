@@ -67,15 +67,14 @@ function Main() {
     //console.log(document.cookie);
     if(isCookie === -1){
       //console.log("쿠키 없음");
-      getIsPop(true);
+    getIsPop(true);
     } else {
       //console.log("쿠키 있음");
-      getIsPop(false);
+    getIsPop(false);
     }
         return () => {
             window.removeEventListener('resize', handleResize);
             window.removeEventListener('scroll', handleScroll);
-           
         }
     }, [index]);
     return (
@@ -87,11 +86,10 @@ function Main() {
             <Process />
             <Team />
             <News />
-               <You />
+            <You />
             <Banner />
             <Btns getIndex={getIndex} />
-              {isPop ? <Popup getIsPop={getIsPop} /> : ""}
-            
+            {isPop ? <Popup getIsPop={getIsPop} /> : ""}
         </div>
     )
 }

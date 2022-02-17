@@ -19,7 +19,7 @@ function Gallery(){
   let list = useRef(null);
   let input = useRef(null);
   let [isPop, setIsPop] = useState(false);
-   let [index, setIndex] = useState(0);
+  let [index, setIndex] = useState(0);
   
   useEffect(()=>{ 
     getFlickr({
@@ -50,7 +50,6 @@ function Gallery(){
         <div className="searchBox">
           <input type="text" ref={input} onKeyPress={e=>{
             const tags = input.current.value; 
-             
             if(e.key !== "Enter" || tags==="") return;
             if(enableClick){
               setEnableClick(false);  
@@ -77,8 +76,6 @@ function Gallery(){
               setInterest(false);             
               list.current.classList.remove("on");         
               setLoading(true);
-             
-                         
               input.current.value = "";
 
               getFlickr({
@@ -89,8 +86,6 @@ function Gallery(){
             }
           }}>Search</button>
         </div>      
-
-       
         {(loading) ? <img className="loading" src={path + "/img/loading2.gif"} /> : ""}
         
         <nav>
@@ -105,8 +100,6 @@ function Gallery(){
               setInterest(false);             
               list.current.classList.remove("on");         
               setLoading(true);
-             
-                         
               input.current.value = "";
 
               getFlickr({
@@ -125,10 +118,6 @@ function Gallery(){
               setInterest(false);             
               list.current.classList.remove("on");         
               setLoading(true);
-             
-                         
-     
-
               getFlickr({
                 type: "search",
                 count: 10,
@@ -145,10 +134,6 @@ function Gallery(){
               setInterest(false);             
               list.current.classList.remove("on");         
               setLoading(true);
-             
-                         
-     
-
               getFlickr({
                 type: "search",
                 count: 10,
@@ -165,7 +150,6 @@ function Gallery(){
               setInterest(false);             
               list.current.classList.remove("on");         
               setLoading(true);
-             
               getFlickr({
                 type: "search",
                 count: 10,
@@ -199,7 +183,6 @@ function Gallery(){
               setInterest(false);             
               list.current.classList.remove("on");         
               setLoading(true);
-             
               getFlickr({
                 type: "search",
                 count: 10,
@@ -232,8 +215,6 @@ function Gallery(){
                       setIndex(index);
                       console.log(index);
                     }}>   <img src={imgSrc} /></div>
-                      
-                   
                       <p>{item.owner}</p>
                       <b>View more</b>
 
@@ -281,12 +262,9 @@ function Gallery(){
     const method2 = "flickr.photos.search";
     const key= "b7af47ce68181695942511b2b8cb5b97";
     const count = opt.count;
- 
-    
     if(opt.type === "interest"){
       url = `${baseURL}method=${method1}&api_key=${key}&per_page=${count}&format=json&nojsoncallback=1`;  
     }
-   
     else if(opt.type === "search"){
       url = `${baseURL}method=${method2}&api_key=${key}&per_page=${count}&format=json&nojsoncallback=1&tags=${opt.tags}`;
     
@@ -299,8 +277,6 @@ function Gallery(){
     .then(json=>{      
       setItems(json.data.photos.photo);
     })    
-    
-   
     setTimeout(()=>{
       list.current.classList.add("on");      
       setLoading(false);
@@ -308,7 +284,6 @@ function Gallery(){
         setEnableClick(true);
       },1000); 
     },1000); 
-     
   }
 
 }

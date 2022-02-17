@@ -1,6 +1,6 @@
 function Process() {
-      const path= process.env.PUBLIC_URL;
-  return (
+    const path= process.env.PUBLIC_URL;
+return (
         <section id='process' className="contents_about03 myScroll">
                         <div className="inner">
                             <h2>Process</h2>
@@ -17,7 +17,7 @@ function Process() {
                         </div>
                     </section>
 
-  )
+)
 }
 
 export default Process;

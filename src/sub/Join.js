@@ -212,13 +212,12 @@ function Join() {
           </fieldset>
         </form>
         <h3>추가입력</h3>
-         <form onSubmit={handleSubmit} >
+        <form onSubmit={handleSubmit} >
           <fieldset>
             <legend className='h'>회원가입 입력 폼 양식</legend>
             <table>
               <caption className='h'>회원가입 입력</caption>
               <tbody>
-               
                 {/* gender */}
                 <tr>
                   <th scope='row'>
@@ -293,16 +292,13 @@ function Join() {
             </table>
           </fieldset>
         </form>
-
-         <form onSubmit={handleSubmit} >
+        <form onSubmit={handleSubmit} >
           <fieldset>
             <legend className='h'>회원가입 입력 폼 양식</legend>
             <table>
               <caption className='h'>회원가입 입력</caption>
               <tbody>
-               
-         
-<tr className="mem">
+              <tr className="mem">
                   <td className="member_wrap">
                             <div className="member">
                       <p>회원약관</p>
@@ -332,7 +328,7 @@ function Join() {
                       name='interests' 
                       onChange = {handleCheck}
                     />
-           <label htmlFor='sport'>이용약관에 동의합니다.(필수)</label>
+          <label htmlFor='sport'>이용약관에 동의합니다.(필수)</label>
 <span className='err'>{err.interests}</span>
                       <p>개인정보 수집 및 이용 동의</p>
                       <textarea id='comments'name='comments'onChange={handleChange}>제 5 조 (이용계약의 성립)
@@ -364,13 +360,13 @@ function Join() {
 2. 기업마당 사이트는 게시된 내용을 사전 통지 없이 편집, 이동할 수 있는 권리를 보유하며, 게시판운영 원칙에 따라 사전 통지 없이 삭제할 수 있습니다.
 3. 귀하의 게시물이 타인의 저작권을 침해함으로써 발생하는 민, 형사상의 책임은 전적으로 귀하가 부담하여야 합니다.
                       </textarea>
-                         <input 
+                      <input 
                       type="checkbox" 
                       id='sports' 
                       name='interests' 
                       onChange = {handleCheck}
                     />
-           <label htmlFor='sport'>개인정보 수집ㆍ이용에 동의합니다.(필수)</label>
+          <label htmlFor='sport'>개인정보 수집ㆍ이용에 동의합니다.(필수)</label>
 <span className='err'>{err.interests}</span>
         </div>
                   </td>

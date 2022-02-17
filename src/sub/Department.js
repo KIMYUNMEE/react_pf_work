@@ -13,14 +13,13 @@ SwiperCore.use(Autoplay);
 
 
 function Department() {
-   let [posts, setPosts] = useState([]);
+  let [posts, setPosts] = useState([]);
   const path= process.env.PUBLIC_URL;
   const url = `${path}/db/department.json`;
-   const members = useSelector(state=>state.memberReducer.members);
+  const members = useSelector(state=>state.memberReducer.members);
   console.log(members);
   const dispatch = useDispatch();
 
- 
   useEffect(()=>{
     axios
       .get(url)
@@ -48,7 +47,7 @@ Our work strives to enhance our sense of surroundings, identity and relationship
         modules={[Navigation, Pagination]}
         spaceBetween={0}
         slidesPerView={3}
-               autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 3000 }}
         navigation
         pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}
@@ -61,26 +60,16 @@ Our work strives to enhance our sense of surroundings, identity and relationship
         <SwiperSlide><li><a href=""><img src={path + "/img/0e8cc335448fee4a99a905e532581caf_500w.jpeg"} /><p>King Abdulaziz Centre for World Culture (Ithra)</p></a></li></SwiperSlide>     
         <SwiperSlide><li><a href=""><img src={path + "/img/31e75d752c0005f363e15d5691c8280b_500w.jpg"} /><p>Marmomacc</p></a></li></SwiperSlide>     
       </Swiper>
-    </ul>
-  
-           
-            
-            
-            
-           
-            
-            
-
-         
+    </ul>       
           <a href="" className="btn_more">SHOW MORE</a>
           <b>Selected Awards</b>
             <table summary="게시글 번호, 게시글 제목, 작성자, 작성일을 포함한 자유게시판">
                 <caption className="hide">회원 자유게시판</caption>
-               <thead>
-                   <th>Year</th>
-                   <th>Award</th>
-                   <th>Project</th>
-               </thead>
+              <thead>
+                  <th>Year</th>
+                  <th>Award</th>
+                  <th>Project</th>
+              </thead>
                 <tbody>
                     <tr>
                         <td>2004</td>
@@ -108,35 +97,27 @@ Our work strives to enhance our sense of surroundings, identity and relationship
                         <td><a href="#"> MIPIM Award, Best Future Project</a></td>
                         <td>MAX IV Lab, Sweden</td>
                     </tr>
- 
                 </tbody>
             </table>
           <a href="" className="btn_more">SHOW MORE</a>
           <h2>Pepole</h2>
-           <div className="wrap01">
+          <div className="wrap01">
             <ul>
               <li><a href=""><img src={path + "/img/21dcee5f3518b517dd549d33ca245755.jpeg"} />
               <b>Alex</b><p>Co-founder</p></a></li>
               
               <li><a href=""><img src={path + "/img/0a83df4119de27d5b9833af30d52d16e.jpeg"} /><b>Jess</b><p>Art director</p></a></li>
               <li><a href=""><img src={path + "/img/1c555928970e09d1f70439b7ec4b7c1d.jpeg"} /><b>Max</b><p>Lead architect</p></a></li>
-                   
               <li><a href=""><img src={path + "/img/1e7433a4b487f7fd43a83ca4cb3a02d6.jpeg"} /><b>Peter</b><p>Graphic designer</p></a></li>
-
               <li><a href=""><img src={path + "/img/0e135fe9e52ab7fcd2260517f6759d6c.jpeg"} /><b>Jim</b><p>Project manager</p></a></li>
-         <li><a href=""><img src={path + "/img/3f8d8f2ab645f6f8a2a0d4d37a423399.jpeg"} /><b>Ann</b><p>CEO</p></a></li>
-               </ul>
+              <li><a href=""><img src={path + "/img/3f8d8f2ab645f6f8a2a0d4d37a423399.jpeg"} /><b>Ann</b><p>CEO</p></a></li>
+              </ul>
             </div>
           <a href="#" className="btn_show">SHOW ALL</a>
             <strong className="txt_project">Start a project?</strong>
                     <a href="" className="contact">CONTACT US</a>
       </div>
-      
-            
-      
-        
       </div>
-      
     </section>
     
   )
