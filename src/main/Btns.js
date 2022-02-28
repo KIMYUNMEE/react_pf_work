@@ -12,5 +12,5 @@ function Btns(props){
       <li onClick={()=>props.getIndex(7)}></li>
     </ul>
   )
-}
+} 
 export default Btns;
