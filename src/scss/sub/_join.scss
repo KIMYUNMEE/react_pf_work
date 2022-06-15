@@ -7,6 +7,7 @@
       padding-bottom: 20px;
       border-bottom: 1px solid #000;
     }
+
     .join_box {
       position: relative;
       border-top: 1px solid #666;
@@ -15,6 +16,7 @@
       font-weight: bold;
       padding: 42px;
       margin-bottom: 40px;
+
       &::before {
         content: "Sign up order";
         clear: both;
@@ -24,25 +26,30 @@
         font-size: 11px;
       }
     }
+
     form {
       .h {
         position: absolute;
         left: -99999999999%;
       }
+
       table,
       fieldset {
         width: 100%;
         border: none;
+
         th,
         td {
           border-bottom: 1px solid #ddd;
           padding: 20px 30px;
+
           p {
             font-size: 11px;
             color: lightcoral;
             padding-bottom: 10px;
           }
         }
+
         th {
           width: 25%;
           height: 65px;
@@ -76,7 +83,9 @@
             }
           }
         }
+
         td {
+
           input[type="text"],
           input[type="password"],
           select {
@@ -84,17 +93,20 @@
             padding: 10px 20px;
             border: 1px solid #aaa;
           }
+
           label {
             font: 12px/1 "arial";
             color: #777;
             margin-right: 5px;
           }
+
           input[type="radio"],
           input[type="checkbox"] {
             margin-right: 20px;
           }
         }
       }
+
       .mem {
         .member_wrap {
           .member {
@@ -105,6 +117,7 @@
               color: #000;
               padding-bottom: 18px;
             }
+
             textarea {
               width: 100%;
               height: 150px;
@@ -114,11 +127,13 @@
               resize: none;
               margin-bottom: 15px;
             }
+
             input[type="checkbox"] {
               display: inline-block;
               margin-right: 7px;
               margin-left: 7px;
             }
+
             label {
               font-size: 14px;
               color: #000;
@@ -128,11 +143,14 @@
       }
 
       .err {
+        width: 40%;
+        display: inline-block;
         padding-left: 20px;
         font: 11px/1 "맑은 고딕";
         color: lightcoral;
       }
     }
+
     textarea {
       width: 60%;
       height: 150px;
@@ -148,11 +166,13 @@
     .inner {
       table {
         td {
+
           input[type="text"],
           input[type="password"],
           select {
             width: 90%;
           }
+
           textarea {
             width: 90%;
           }
@@ -168,6 +188,7 @@
       h2 {
         font-size: 70px;
       }
+
       h3 {
         font-size: 23px;
       }
@@ -179,16 +200,20 @@
       h2 {
         font-size: 40px;
       }
+
       h3 {
         font-size: 20px;
       }
+
       table {
         td {
+
           input[type="text"],
           input[type="password"],
           select {
             width: 100%;
           }
+
           textarea {
             width: 100%;
           }
@@ -199,11 +224,13 @@
 }
 
 @media screen and (max-width: $mobile) {
+
   .join .inner form table th,
   .join .inner form fieldset th {
     width: 30%;
     line-height: 25px;
   }
+
   .join .inner form table td input[type="text"],
   .join .inner form table td input[type="password"],
   .join .inner form table td select,
@@ -212,10 +239,12 @@
   .join .inner form fieldset td select {
     width: 80%;
   }
+
   .join .inner form .mem .member_wrap .member p {
     font-size: 17px;
     margin-top: 25px;
   }
+
   .join .inner form table th,
   .join .inner form table td,
   .join .inner form fieldset th,
