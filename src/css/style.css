@@ -287,9 +287,6 @@ body {
   color: #121212;
 }
 
-#footer .hide {
-  display: none;
-}
 
 @media screen and (max-width: 739px) {
   #footer {
@@ -2131,8 +2128,9 @@ body {
   padding-right: 8px;
 }
 
-.department .hide {
-  display: none;
+.hide {
+  position: absolute;
+  left: -99999999999%;
 }
 
 @media screen and (max-width: 1179px) {
@@ -2489,7 +2487,7 @@ body {
   font-size: 11px;
 }
 
-.join .inner form .h {
+.join .inner form .join_form {
   position: absolute;
   left: -99999999999%;
 }

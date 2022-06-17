@@ -150,16 +150,18 @@ function Department() {
               </SwiperSlide>
             </Swiper>
           </ul>
-          <a href="" className="btn_more">
+          <a href="" className="btn_more" alt="더보기">
             SHOW MORE
           </a>
           <b>Selected Awards</b>
-          <table summary="게시글 번호, 게시글 제목, 작성자, 작성일을 포함한 자유게시판">
+          <table>
             <caption className="hide">회원 자유게시판</caption>
             <thead>
-              <th>Year</th>
-              <th>Award</th>
-              <th>Project</th>
+              <tr>
+                <th scope="row">Year</th>
+                <th scope="row">Award</th>
+                <th scope="row">Project</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -198,9 +200,8 @@ function Department() {
                 <td>MAX IV Lab, Sweden</td>
               </tr>
             </tbody>
-            <tfoot></tfoot>
           </table>
-          <a href="" className="btn_more">
+          <a href="" className="btn_more" alt="더보기">
             SHOW MORE
           </a>
           <h2>Pepole</h2>
@@ -270,11 +271,11 @@ function Department() {
               </li>
             </ul>
           </div>
-          <a href="#" className="btn_show">
+          <a href="#" className="btn_show" alt="모두보기">
             SHOW ALL
           </a>
           <strong className="txt_project">Start a project?</strong>
-          <a href="" className="contact">
+          <a href="" className="contact" alt="연락하기">
             CONTACT US
           </a>
         </div>

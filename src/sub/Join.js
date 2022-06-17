@@ -105,9 +105,9 @@ function Join() {
         <h3>필수입력</h3>
         <form onSubmit={handleSubmit}>
           <fieldset>
-            <legend className="h">회원가입 입력 폼 양식</legend>
+            <legend className="join_form">회원가입 입력 폼 양식</legend>
             <table>
-              <caption className="h">회원가입 입력</caption>
+              <caption className="join_form">회원가입 입력</caption>
               <tbody>
                 {/* userid */}
                 <tr>
@@ -223,9 +223,9 @@ function Join() {
         <h3>추가입력</h3>
         <form onSubmit={handleSubmit}>
           <fieldset>
-            <legend className="h">회원가입 입력 폼 양식</legend>
+            <legend className="join_form">회원가입 입력 폼 양식</legend>
             <table>
-              <caption className="h">회원가입 입력</caption>
+              <caption className="join_form">회원가입 입력</caption>
               <tbody>
                 {/* gender */}
                 <tr>
@@ -238,7 +238,7 @@ function Join() {
                       name="gender"
                       onChange={handleCheck}
                     />
-                    <label htmlFor="femal">Female</label>
+                    <label htmlFor="female">Female</label>
                     <input
                       type="radio"
                       id="female"
@@ -299,15 +299,14 @@ function Join() {
         </form>
         <form onSubmit={handleSubmit}>
           <fieldset>
-            <legend className="h">회원가입 입력 폼 양식</legend>
+            <legend className="join_form">회원가입 입력 폼 양식</legend>
             <table>
-              <caption className="h">회원가입 입력</caption>
+              <caption className="join_form ">회원가입 입력</caption>
               <tbody>
                 <tr className="mem">
                   <td className="member_wrap">
                     <div className="member">
                       <p>회원약관</p>
-
                       <textarea
                         id="comments"
                         name="comments"
@@ -424,7 +423,7 @@ function Join() {
                         name="essential"
                         onChange={handleCheck}
                       />
-                      <label htmlFor="sport">
+                      <label htmlFor="sports">
                         개인정보 수집ㆍ이용에 동의합니다.(필수)
                       </label>
                       <span className="err">{err.essential}</span>

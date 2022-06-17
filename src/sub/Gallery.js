@@ -279,8 +279,7 @@ function Gallery() {
                         console.log(index);
                       }}
                     >
-                      {" "}
-                      <img src={imgSrc} />
+                      <img src={imgSrc} alt="flickr이미지" />
                     </div>
                     <p>{item.owner}</p>
                     <b>View more</b>
@@ -309,7 +308,7 @@ function Gallery() {
     return (
       <aside className="pop">
         {/* 해당 이미지 url적용 */}
-        <img src={imgSrc} />
+        <img src={imgSrc} alt="flickr 이미지" />
         {/* items의 index번째 객체 안에 있는 텍스트 */}
         <p>{items[index].title}</p>
         <span
