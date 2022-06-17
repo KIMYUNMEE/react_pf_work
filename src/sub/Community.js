@@ -94,6 +94,7 @@ function Community() {
           <div className="news_img">
             <img
               src={path + "/img/854ef8b1ce36f53d95eb686c5906cfaa_500w.jpg"}
+              alt="community visual이미지"
             />
           </div>
           <div className="news_txt">
@@ -167,15 +168,24 @@ function Community() {
               <span>FAQ</span>
             </div>
             <div>
-              <input type="text" placeholder="Your search" />
+              <label htmlFor="search"></label>
+              <input type="text" placeholder="Your search" id="search" />
             </div>
           </div>
           <section className="inputBox">
-            <input type="text" placeholder="제목을 입력하세요" ref={input} />
+            <label htmlFor="title"></label>
+            <input
+              type="text"
+              placeholder="제목을 입력하세요"
+              id="title"
+              ref={input}
+            />
             <br />
+            <label htmlFor="content"></label>
             <textarea
               cols="30"
               rows="5"
+              id="content"
               placeholder="질문하고자 하는 내용을 입력하세요"
               ref={textarea}
             ></textarea>
